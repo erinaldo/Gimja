@@ -1,0 +1,12 @@
+D:\Projects\Gimja\GimjaBL\bin\Release\GimjaBL.dll.config
+D:\Projects\Gimja\GimjaBL\bin\Release\GimjaBL.dll
+D:\Projects\Gimja\GimjaBL\bin\Release\GimjaBL.pdb
+D:\Projects\Gimja\GimjaBL\bin\Release\EntityFramework.dll
+D:\Projects\Gimja\GimjaBL\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\Gimja\GimjaBL\bin\Release\GimjaDL.dll
+D:\Projects\Gimja\GimjaBL\bin\Release\GimjaDL.pdb
+D:\Projects\Gimja\GimjaBL\bin\Release\EntityFramework.xml
+D:\Projects\Gimja\GimjaBL\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\Gimja\GimjaBL\obj\Release\GimjaBL.csprojResolveAssemblyReference.cache
+D:\Projects\Gimja\GimjaBL\obj\Release\GimjaBL.dll
+D:\Projects\Gimja\GimjaBL\obj\Release\GimjaBL.pdb

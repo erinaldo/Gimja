@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LookupeDMSModelStoreContainer" CdmEntityContainer="LookupData">
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="LookupeDMSModel.Brand">
+        <MappingFragment StoreEntitySet="lkBrand">
+          <ScalarProperty Name="lkBrandID" ColumnName="lkBrandID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="LookupeDMSModel.Category">
+        <MappingFragment StoreEntitySet="lkCategory">
+          <ScalarProperty Name="lkCategoryID" ColumnName="lkCategoryID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditStatus">
+      <EntityTypeMapping TypeName="LookupeDMSModel.CreditStatus">
+        <MappingFragment StoreEntitySet="lkCreditStatus">
+          <ScalarProperty Name="lkCreditSatusID" ColumnName="lkCreditSatusID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="LookupeDMSModel.Manufacturer">
+        <MappingFragment StoreEntitySet="lkManufacturer">
+          <ScalarProperty Name="lkManufacturerID" ColumnName="lkManufacturerID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="contactPerson" ColumnName="contactPerson" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="LookupeDMSModel.Supplier">
+        <MappingFragment StoreEntitySet="lkSupplier">
+          <ScalarProperty Name="lkSupplierID" ColumnName="lkSupplierID" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="contactPerson" ColumnName="contactPerson" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxTypes">
+      <EntityTypeMapping TypeName="LookupeDMSModel.TaxType">
+        <MappingFragment StoreEntitySet="lkTaxType">
+          <ScalarProperty Name="lkTaxTypeID" ColumnName="lkTaxTypeID" />
+          <ScalarProperty Name="taxTypeName" ColumnName="taxTypeName" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="LookupeDMSModel.Unit">
+        <MappingFragment StoreEntitySet="lkUnit">
+          <ScalarProperty Name="lkUnitID" ColumnName="lkUnitID" />
+          <ScalarProperty Name="unitName" ColumnName="unitName" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="LookupeDMSModel.Address">
+        <MappingFragment StoreEntitySet="tblAddress">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kebele" ColumnName="kebele" />
+          <ScalarProperty Name="woreda" ColumnName="woreda" />
+          <ScalarProperty Name="subcity" ColumnName="subcity" />
+          <ScalarProperty Name="city_town" ColumnName="city_town" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="houseNo" ColumnName="houseNo" />
+          <ScalarProperty Name="pobox" ColumnName="pobox" />
+          <ScalarProperty Name="primaryEmail" ColumnName="primaryEmail" />
+          <ScalarProperty Name="secondaryEmail" ColumnName="secondaryEmail" />
+          <ScalarProperty Name="state_region" ColumnName="state_region" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="zipCode_postalCode" ColumnName="zipCode_postalCode" />
+          <ScalarProperty Name="additionalInfo" ColumnName="additionalInfo" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TelephoneFaxes">
+      <EntityTypeMapping TypeName="LookupeDMSModel.TelephoneFax">
+        <MappingFragment StoreEntitySet="tblTelephoneFax">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblManufacturerAddress" TypeName="LookupeDMSModel.tblManufacturerAddress" StoreEntitySet="tblManufacturerAddress">
+      <EndProperty Name="lkManufacturer">
+        <ScalarProperty Name="lkManufacturerID" ColumnName="rlkManufacturerID" />
+      </EndProperty>
+      <EndProperty Name="tblAddress">
+        <ScalarProperty Name="id" ColumnName="addressID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblManufacturerTelephoneFax" TypeName="LookupeDMSModel.tblManufacturerTelephoneFax" StoreEntitySet="tblManufacturerTelephoneFax">
+      <EndProperty Name="lkManufacturer">
+        <ScalarProperty Name="lkManufacturerID" ColumnName="rlkManufacturerID" />
+      </EndProperty>
+      <EndProperty Name="tblTelephoneFax">
+        <ScalarProperty Name="id" ColumnName="telephoneFaxID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

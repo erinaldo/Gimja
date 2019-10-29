@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eDMSModelStoreContainer" CdmEntityContainer="eDMSEntity">
+    <FunctionImportMapping FunctionImportName="GenerateItemID" FunctionName="eDMSModel.Store.GenerateItemID" />
+    <FunctionImportMapping FunctionImportName="GetFilteredCategories" FunctionName="eDMSModel.Store.GetFilteredCategories">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eDMSModel.GetFilteredCategories_Result">
+          <ScalarProperty Name="lkCategoryID" ColumnName="lkCategoryID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GenerateID" FunctionName="eDMSModel.Store.GenerateID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eDMSModel.GenerateID_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="eDMSModel.Brand">
+        <MappingFragment StoreEntitySet="lkBrand">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lkBrandID" ColumnName="lkBrandID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="eDMSModel.Category">
+        <MappingFragment StoreEntitySet="lkCategory">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lkCategoryID" ColumnName="lkCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditStatus">
+      <EntityTypeMapping TypeName="eDMSModel.CreditStatus">
+        <MappingFragment StoreEntitySet="lkCreditStatus">
+          <ScalarProperty Name="lkCreditStatusID" ColumnName="lkCreditStatusID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="eDMSModel.Manufacturer">
+        <MappingFragment StoreEntitySet="lkManufacturer">
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="contactPerson" ColumnName="contactPerson" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lkManufacturerID" ColumnName="lkManufacturerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuTypes">
+      <EntityTypeMapping TypeName="eDMSModel.MenuType">
+        <MappingFragment StoreEntitySet="lkMenuType">
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="lkMenuTypeID" ColumnName="lkMenuTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesLocations">
+      <EntityTypeMapping TypeName="eDMSModel.SalesLocation">
+        <MappingFragment StoreEntitySet="lkSalesLocation">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lkSalesLocationID" ColumnName="lkSalesLocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="eDMSModel.Supplier">
+        <MappingFragment StoreEntitySet="lkSupplier">
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="contactPerson" ColumnName="contactPerson" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="lkSupplierID" ColumnName="lkSupplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxTypes">
+      <EntityTypeMapping TypeName="eDMSModel.TaxType">
+        <MappingFragment StoreEntitySet="lkTaxType">
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="taxTypeName" ColumnName="taxTypeName" />
+          <ScalarProperty Name="lkTaxTypeID" ColumnName="lkTaxTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TelephoneFaxTypes">
+      <EntityTypeMapping TypeName="eDMSModel.TelephoneFaxType">
+        <MappingFragment StoreEntitySet="lkTelephoneFaxType">
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lkTelephoneFaxTypeID" ColumnName="lkTelephoneFaxTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="eDMSModel.Unit">
+        <MappingFragment StoreEntitySet="lkUnit">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="unitName" ColumnName="unitName" />
+          <ScalarProperty Name="lkUnitID" ColumnName="lkUnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="eDMSModel.Warehouse">
+        <MappingFragment StoreEntitySet="lkWarehouse">
+          <ScalarProperty Name="isDefault" ColumnName="isDefault" />
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lkWarehouseID" ColumnName="lkWarehouseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="eDMSModel.Address">
+        <MappingFragment StoreEntitySet="tblAddress">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="additionalInfo" ColumnName="additionalInfo" />
+          <ScalarProperty Name="zipCode_postalCode" ColumnName="zipCode_postalCode" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state_region" ColumnName="state_region" />
+          <ScalarProperty Name="secondaryEmail" ColumnName="secondaryEmail" />
+          <ScalarProperty Name="primaryEmail" ColumnName="primaryEmail" />
+          <ScalarProperty Name="pobox" ColumnName="pobox" />
+          <ScalarProperty Name="houseNo" ColumnName="houseNo" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="city_town" ColumnName="city_town" />
+          <ScalarProperty Name="subcity" ColumnName="subcity" />
+          <ScalarProperty Name="woreda" ColumnName="woreda" />
+          <ScalarProperty Name="kebele" ColumnName="kebele" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="eDMSModel.Branch">
+        <MappingFragment StoreEntitySet="tblBranch">
+          <ScalarProperty Name="isDefault" ColumnName="isDefault" />
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyInfoes">
+      <EntityTypeMapping TypeName="eDMSModel.CompanyInfo">
+        <MappingFragment StoreEntitySet="tblCompanyInfo">
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="VATRegistrationDate" ColumnName="VATRegistrationDate" />
+          <ScalarProperty Name="VATRegistrationNo" ColumnName="VATRegistrationNo" />
+          <ScalarProperty Name="TINNumber" ColumnName="TINNumber" />
+          <ScalarProperty Name="amharicName" ColumnName="amharicName" />
+          <ScalarProperty Name="englishName" ColumnName="englishName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditPayments">
+      <EntityTypeMapping TypeName="eDMSModel.CreditPayment">
+        <MappingFragment StoreEntitySet="tblCreditPayment">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="processedBy" ColumnName="processedBy" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="rlkCreditStatusID" ColumnName="rlkCreditStatusID" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="salesID" ColumnName="salesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="eDMSModel.Customer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="creditLimit" ColumnName="creditLimit" />
+          <ScalarProperty Name="grandfatherName" ColumnName="grandfatherName" />
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="VATRegistrationDate" ColumnName="VATRegistrationDate" />
+          <ScalarProperty Name="VATRegistrationNo" ColumnName="VATRegistrationNo" />
+          <ScalarProperty Name="TINNo" ColumnName="TINNo" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="fatherName" ColumnName="fatherName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Issuances">
+      <EntityTypeMapping TypeName="eDMSModel.Issuance">
+        <MappingFragment StoreEntitySet="tblIssuance">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="warehouseID" ColumnName="warehouseID" />
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="approvedDate" ColumnName="approvedDate" />
+          <ScalarProperty Name="approvedBy" ColumnName="approvedBy" />
+          <ScalarProperty Name="issuedBy" ColumnName="issuedBy" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="issuedTo" ColumnName="issuedTo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IssuedItems">
+      <EntityTypeMapping TypeName="eDMSModel.IssuedItem">
+        <MappingFragment StoreEntitySet="tblIssuedItems">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="qtyPerPack" ColumnName="qtyPerPack" />
+          <ScalarProperty Name="noPack" ColumnName="noPack" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="issueDetailID" ColumnName="issueDetailID" />
+          <ScalarProperty Name="issuanceID" ColumnName="issuanceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="eDMSModel.Item">
+        <MappingFragment StoreEntitySet="tblItem">
+          <ScalarProperty Name="averageCost" ColumnName="averageCost" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isTaxExempted" ColumnName="isTaxExempted" />
+          <ScalarProperty Name="rlkTaxTypeID" ColumnName="rlkTaxTypeID" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="orderQuantity" ColumnName="orderQuantity" />
+          <ScalarProperty Name="rlkUnitID" ColumnName="rlkUnitID" />
+          <ScalarProperty Name="pickFaceQty" ColumnName="pickFaceQty" />
+          <ScalarProperty Name="reorderLevel" ColumnName="reorderLevel" />
+          <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+          <ScalarProperty Name="origin" ColumnName="origin" />
+          <ScalarProperty Name="rlkCategoryID" ColumnName="rlkCategoryID" />
+          <ScalarProperty Name="rlkBrandID" ColumnName="rlkBrandID" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemRequests">
+      <EntityTypeMapping TypeName="eDMSModel.ItemRequest">
+        <MappingFragment StoreEntitySet="tblItemRequest">
+          <ScalarProperty Name="warehouseID" ColumnName="warehouseID" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="referenceNo" ColumnName="referenceNo" />
+          <ScalarProperty Name="branchID" ColumnName="branchID" />
+          <ScalarProperty Name="salesID" ColumnName="salesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="eDMSModel.Menu">
+        <MappingFragment StoreEntitySet="tblMenu">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="disabled" ColumnName="disabled" />
+          <ScalarProperty Name="visible" ColumnName="visible" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="caption" ColumnName="caption" />
+          <ScalarProperty Name="rlkMenuTypeID" ColumnName="rlkMenuTypeID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrders">
+      <EntityTypeMapping TypeName="eDMSModel.PurchaseOrder">
+        <MappingFragment StoreEntitySet="tblPurchaseOrder">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="approvedBy" ColumnName="approvedBy" />
+          <ScalarProperty Name="processedBy" ColumnName="processedBy" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderDetails">
+      <EntityTypeMapping TypeName="eDMSModel.PurchaseOrderDetail">
+        <MappingFragment StoreEntitySet="tblPurchaseOrderDetail">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="lkManufacturerID" ColumnName="lkManufacturerID" />
+          <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="origin" ColumnName="origin" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="purchaseOrderID" ColumnName="purchaseOrderID" />
+          <ScalarProperty Name="purchaseOrderDetailID" ColumnName="purchaseOrderDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Receipts">
+      <EntityTypeMapping TypeName="eDMSModel.Receipt">
+        <MappingFragment StoreEntitySet="tblReceipt">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isApproved" ColumnName="isApproved" />
+          <ScalarProperty Name="receivedFrom" ColumnName="receivedFrom" />
+          <ScalarProperty Name="isStoreWarehouse" ColumnName="isStoreWarehouse" />
+          <ScalarProperty Name="processedBy" ColumnName="processedBy" />
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="approvedDate" ColumnName="approvedDate" />
+          <ScalarProperty Name="approvedBy" ColumnName="approvedBy" />
+          <ScalarProperty Name="receivedBy" ColumnName="receivedBy" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="rlkSupplierID" ColumnName="rlkSupplierID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReceivedItems">
+      <EntityTypeMapping TypeName="eDMSModel.ReceivedItem">
+        <MappingFragment StoreEntitySet="tblReceivedItems">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="unitSellingPrice" ColumnName="unitSellingPrice" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="qtyPerPack" ColumnName="qtyPerPack" />
+          <ScalarProperty Name="noPack" ColumnName="noPack" />
+          <ScalarProperty Name="rlkManufacturerID" ColumnName="rlkManufacturerID" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="receiptDetailID" ColumnName="receiptDetailID" />
+          <ScalarProperty Name="receiptID" ColumnName="receiptID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnedItems">
+      <EntityTypeMapping TypeName="eDMSModel.ReturnedItem">
+        <MappingFragment StoreEntitySet="tblReturnedItems">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="refundedAmount" ColumnName="refundedAmount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="returnedDetailID" ColumnName="returnedDetailID" />
+          <ScalarProperty Name="salesReturnID" ColumnName="salesReturnID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="eDMSModel.Role">
+        <MappingFragment StoreEntitySet="tblRole">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="eDMSModel.Sale">
+        <MappingFragment StoreEntitySet="tblSales">
+          <ScalarProperty Name="refNote" ColumnName="refNote" />
+          <ScalarProperty Name="fsNo" ColumnName="fsNo" />
+          <ScalarProperty Name="reference" ColumnName="reference" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="isSalesCredit" ColumnName="isSalesCredit" />
+          <ScalarProperty Name="isVoid" ColumnName="isVoid" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="authorizedBy" ColumnName="authorizedBy" />
+          <ScalarProperty Name="referenceNo" ColumnName="referenceNo" />
+          <ScalarProperty Name="receiptID" ColumnName="receiptID" />
+          <ScalarProperty Name="processedBy" ColumnName="processedBy" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="branchID" ColumnName="branchID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesDetails">
+      <EntityTypeMapping TypeName="eDMSModel.SalesDetail">
+        <MappingFragment StoreEntitySet="tblSalesDetail">
+          <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="salesFrom" ColumnName="salesFrom" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="salesDetailID" ColumnName="salesDetailID" />
+          <ScalarProperty Name="salesID" ColumnName="salesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesReturns">
+      <EntityTypeMapping TypeName="eDMSModel.SalesReturn">
+        <MappingFragment StoreEntitySet="tblSalesReturn">
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="processedBy" ColumnName="processedBy" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="salesID" ColumnName="salesID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocktakings">
+      <EntityTypeMapping TypeName="eDMSModel.Stocktaking">
+        <MappingFragment StoreEntitySet="tblStocktaking">
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SyncTransactions">
+      <EntityTypeMapping TypeName="eDMSModel.SyncTransaction">
+        <MappingFragment StoreEntitySet="tblSyncTransaction">
+          <ScalarProperty Name="branchID" ColumnName="branchID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="tableName" ColumnName="tableName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TelephoneFaxes">
+      <EntityTypeMapping TypeName="eDMSModel.TelephoneFax">
+        <MappingFragment StoreEntitySet="tblTelephoneFax">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="parentID" ColumnName="parentID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="eDMSModel.User">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLocations">
+      <EntityTypeMapping TypeName="eDMSModel.UserLocation">
+        <MappingFragment StoreEntitySet="tblUserLocation">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblMenuRole" TypeName="eDMSModel.tblMenuRole" StoreEntitySet="tblMenuRole">
+      <EndProperty Name="tblRole">
+        <ScalarProperty Name="id" ColumnName="roleID" />
+      </EndProperty>
+      <EndProperty Name="tblMenu">
+        <ScalarProperty Name="id" ColumnName="menuID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="SyncLogs">
+      <EntityTypeMapping TypeName="eDMSModel.SyncLog">
+        <MappingFragment StoreEntitySet="tblSyncLog">
+          <ScalarProperty Name="syncTransactionID" ColumnName="syncTransactionID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="warehouseID" ColumnName="warehouseID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Forms">
+      <EntityTypeMapping TypeName="eDMSModel.Form">
+        <MappingFragment StoreEntitySet="tblForm">
+          <ScalarProperty Name="formName" ColumnName="formName" />
+          <ScalarProperty Name="formID" ColumnName="formID" />
+          <ScalarProperty Name="menuID" ColumnName="menuID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerLedgers">
+      <EntityTypeMapping TypeName="eDMSModel.CustomerLedger">
+        <MappingFragment StoreEntitySet="tblCustomerLedger">
+          <ScalarProperty Name="branchID" ColumnName="branchID" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="lkCreditStatusID" ColumnName="lkCreditStatusID" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="receivable" ColumnName="receivable" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="referenceNo" ColumnName="referenceNo" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LossAdjustments">
+      <EntityTypeMapping TypeName="eDMSModel.LossAdjustment">
+        <MappingFragment StoreEntitySet="tblLossAdjustment">
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="isLoss" ColumnName="isLoss" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WriteOffs">
+      <EntityTypeMapping TypeName="eDMSModel.WriteOff">
+        <MappingFragment StoreEntitySet="tblWriteOff">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

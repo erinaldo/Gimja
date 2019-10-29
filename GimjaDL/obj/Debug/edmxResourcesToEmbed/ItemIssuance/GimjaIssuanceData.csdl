@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eDMSIssuance" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CreditStatus" EntityType="eDMSIssuance.CreditStatus" />
+    <EntitySet Name="TaxTypes" EntityType="eDMSIssuance.TaxType" />
+    <EntitySet Name="Branches" EntityType="eDMSIssuance.Branch" />
+    <EntitySet Name="CompanyInfo2" EntityType="eDMSIssuance.CompanyInfo2" />
+    <EntitySet Name="CreditPayments" EntityType="eDMSIssuance.CreditPayment" />
+    <EntitySet Name="Customers" EntityType="eDMSIssuance.Customer" />
+    <EntitySet Name="Issuances" EntityType="eDMSIssuance.Issuance" />
+    <EntitySet Name="IssuedItems" EntityType="eDMSIssuance.IssuedItem" />
+    <EntitySet Name="Items" EntityType="eDMSIssuance.Item" />
+    <EntitySet Name="ItemRequests" EntityType="eDMSIssuance.ItemRequest" />
+    <EntitySet Name="ReturnedItems" EntityType="eDMSIssuance.ReturnedItem" />
+    <EntitySet Name="Sales" EntityType="eDMSIssuance.Sale" />
+    <EntitySet Name="SalesDetails" EntityType="eDMSIssuance.SalesDetail" />
+    <EntitySet Name="SalesReturns" EntityType="eDMSIssuance.SalesReturn" />
+    <AssociationSet Name="FK_tblCreditPayment_lkCreditStatus" Association="eDMSIssuance.FK_tblCreditPayment_lkCreditStatus">
+      <End Role="lkCreditStatus" EntitySet="CreditStatus" />
+      <End Role="tblCreditPayment" EntitySet="CreditPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkTaxType" Association="eDMSIssuance.FK_tblItem_lkTaxType">
+      <End Role="lkTaxType" EntitySet="TaxTypes" />
+      <End Role="tblItem" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblIssuance_tblBranch" Association="eDMSIssuance.FK_tblIssuance_tblBranch">
+      <End Role="tblBranch" EntitySet="Branches" />
+      <End Role="tblIssuance" EntitySet="Issuances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItemRequest_tblBranch" Association="eDMSIssuance.FK_tblItemRequest_tblBranch">
+      <End Role="tblBranch" EntitySet="Branches" />
+      <End Role="tblItemRequest" EntitySet="ItemRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSales_tblBranch" Association="eDMSIssuance.FK_tblSales_tblBranch">
+      <End Role="tblBranch" EntitySet="Branches" />
+      <End Role="tblSales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCreditPayment_tblSales" Association="eDMSIssuance.FK_tblCreditPayment_tblSales">
+      <End Role="tblSales" EntitySet="Sales" />
+      <End Role="tblCreditPayment" EntitySet="CreditPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSales_tblCustomer" Association="eDMSIssuance.FK_tblSales_tblCustomer">
+      <End Role="tblCustomer" EntitySet="Customers" />
+      <End Role="tblSales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblIssuedItems_tblIssuance1" Association="eDMSIssuance.FK_tblIssuedItems_tblIssuance1">
+      <End Role="tblIssuance" EntitySet="Issuances" />
+      <End Role="tblIssuedItems" EntitySet="IssuedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblIssuedItems_tblItem" Association="eDMSIssuance.FK_tblIssuedItems_tblItem">
+      <End Role="tblItem" EntitySet="Items" />
+      <End Role="tblIssuedItems" EntitySet="IssuedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItemRequest_tblSales" Association="eDMSIssuance.FK_tblItemRequest_tblSales">
+      <End Role="tblSales" EntitySet="Sales" />
+      <End Role="tblItemRequest" EntitySet="ItemRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReturnedItems_tblSalesReturn" Association="eDMSIssuance.FK_tblReturnedItems_tblSalesReturn">
+      <End Role="tblSalesReturn" EntitySet="SalesReturns" />
+      <End Role="tblReturnedItems" EntitySet="ReturnedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesDetail_tblSales1" Association="eDMSIssuance.FK_tblSalesDetail_tblSales1">
+      <End Role="tblSales" EntitySet="Sales" />
+      <End Role="tblSalesDetail" EntitySet="SalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesReturn_tblSales" Association="eDMSIssuance.FK_tblSalesReturn_tblSales">
+      <End Role="tblSales" EntitySet="Sales" />
+      <End Role="tblSalesReturn" EntitySet="SalesReturns" />
+    </AssociationSet>
+    <EntitySet Name="Addresses" EntityType="eDMSIssuance.Address" />
+    <EntitySet Name="TelephoneFaxes" EntityType="eDMSIssuance.TelephoneFax" />
+    <AssociationSet Name="tblCompanyInfoAddress" Association="eDMSIssuance.tblCompanyInfoAddress">
+      <End Role="tblAddress" EntitySet="Addresses" />
+      <End Role="CompanyInfo" EntitySet="CompanyInfo2" />
+    </AssociationSet>
+    <AssociationSet Name="tblCustomerTelephoneFax" Association="eDMSIssuance.tblCustomerTelephoneFax">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="TelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+    <AssociationSet Name="tblBranchTelephoneFax" Association="eDMSIssuance.tblBranchTelephoneFax">
+      <End Role="Branch" EntitySet="Branches" />
+      <End Role="TelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+    <AssociationSet Name="tblCompanyInfoTelephoneFax" Association="eDMSIssuance.tblCompanyInfoTelephoneFax">
+      <End Role="CompanyInfo" EntitySet="CompanyInfo2" />
+      <End Role="TelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+    <AssociationSet Name="tblBranchAddress" Association="eDMSIssuance.tblBranchAddress">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Branch" EntitySet="Branches" />
+    </AssociationSet>
+    <AssociationSet Name="tblCustomerAddress" Association="eDMSIssuance.tblCustomerAddress">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CreditStatus">
+    <Key>
+      <PropertyRef Name="lkCreditSatusID" />
+    </Key>
+    <Property Name="lkCreditSatusID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="CreditPayments" Relationship="eDMSIssuance.FK_tblCreditPayment_lkCreditStatus" FromRole="lkCreditStatus" ToRole="tblCreditPayment" />
+  </EntityType>
+  <EntityType Name="TaxType">
+    <Key>
+      <PropertyRef Name="lkTaxTypeID" />
+    </Key>
+    <Property Name="lkTaxTypeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="taxTypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Items" Relationship="eDMSIssuance.FK_tblItem_lkTaxType" FromRole="lkTaxType" ToRole="tblItem" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Issuances" Relationship="eDMSIssuance.FK_tblIssuance_tblBranch" FromRole="tblBranch" ToRole="tblIssuance" />
+    <NavigationProperty Name="ItemRequests" Relationship="eDMSIssuance.FK_tblItemRequest_tblBranch" FromRole="tblBranch" ToRole="tblItemRequest" />
+    <NavigationProperty Name="Sales" Relationship="eDMSIssuance.FK_tblSales_tblBranch" FromRole="tblBranch" ToRole="tblSales" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSIssuance.tblBranchTelephoneFax" FromRole="Branch" ToRole="TelephoneFax" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSIssuance.tblBranchAddress" FromRole="Branch" ToRole="Address" />
+  </EntityType>
+  <EntityType Name="CompanyInfo2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TINNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VATRegistrationNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VATRegistrationDate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSIssuance.tblCompanyInfoAddress" FromRole="CompanyInfo" ToRole="tblAddress" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSIssuance.tblCompanyInfoTelephoneFax" FromRole="CompanyInfo" ToRole="TelephoneFax" />
+  </EntityType>
+  <EntityType Name="CreditPayment">
+    <Key>
+      <PropertyRef Name="salesID" />
+    </Key>
+    <Property Name="salesID" Type="Int32" Nullable="false" />
+    <Property Name="rlkCreditStatusID" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="processedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="CreditStatus" Relationship="eDMSIssuance.FK_tblCreditPayment_lkCreditStatus" FromRole="tblCreditPayment" ToRole="lkCreditStatus" />
+    <NavigationProperty Name="Sale" Relationship="eDMSIssuance.FK_tblCreditPayment_tblSales" FromRole="tblCreditPayment" ToRole="tblSales" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fatherName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="grandFatherName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="companyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TINNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VATRegistrationNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VATRegistrationDate" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Sales" Relationship="eDMSIssuance.FK_tblSales_tblCustomer" FromRole="tblCustomer" ToRole="tblSales" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSIssuance.tblCustomerTelephoneFax" FromRole="Customer" ToRole="TelephoneFax" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSIssuance.tblCustomerAddress" FromRole="Customer" ToRole="Address" />
+  </EntityType>
+  <EntityType Name="Issuance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="issuedTo" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="issuedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="approvedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="approvedDate" Type="DateTime" Precision="3" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Branch" Relationship="eDMSIssuance.FK_tblIssuance_tblBranch" FromRole="tblIssuance" ToRole="tblBranch" />
+    <NavigationProperty Name="IssuedItems" Relationship="eDMSIssuance.FK_tblIssuedItems_tblIssuance1" FromRole="tblIssuance" ToRole="tblIssuedItems" />
+  </EntityType>
+  <EntityType Name="IssuedItem">
+    <Key>
+      <PropertyRef Name="issuanceID" />
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="issuanceID" Type="Int32" Nullable="false" />
+    <Property Name="itemID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="noPack" Type="Int32" />
+    <Property Name="qtyPerPack" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Issuance" Relationship="eDMSIssuance.FK_tblIssuedItems_tblIssuance1" FromRole="tblIssuedItems" ToRole="tblIssuance" />
+    <NavigationProperty Name="Item" Relationship="eDMSIssuance.FK_tblIssuedItems_tblItem" FromRole="tblIssuedItems" ToRole="tblItem" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rlkBrandID" Type="Int32" Nullable="false" />
+    <Property Name="rlkCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="unitPrice" Type="Double" />
+    <Property Name="reorderLevel" Type="Double" />
+    <Property Name="pickFaceQty" Type="Double" />
+    <Property Name="rlkUnitID" Type="Int32" />
+    <Property Name="orderQuantity" Type="Double" />
+    <Property Name="description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="rlkTaxTypeID" Type="Int32" />
+    <Property Name="isTaxExempted" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="TaxType" Relationship="eDMSIssuance.FK_tblItem_lkTaxType" FromRole="tblItem" ToRole="lkTaxType" />
+    <NavigationProperty Name="IssuedItems" Relationship="eDMSIssuance.FK_tblIssuedItems_tblItem" FromRole="tblItem" ToRole="tblIssuedItems" />
+  </EntityType>
+  <EntityType Name="ItemRequest">
+    <Key>
+      <PropertyRef Name="salesID" />
+    </Key>
+    <Property Name="salesID" Type="Int32" Nullable="false" />
+    <Property Name="branchID" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Branch" Relationship="eDMSIssuance.FK_tblItemRequest_tblBranch" FromRole="tblItemRequest" ToRole="tblBranch" />
+    <NavigationProperty Name="Sale" Relationship="eDMSIssuance.FK_tblItemRequest_tblSales" FromRole="tblItemRequest" ToRole="tblSales" />
+  </EntityType>
+  <EntityType Name="ReturnedItem">
+    <Key>
+      <PropertyRef Name="salesReturnID" />
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="salesReturnID" Type="Int32" Nullable="false" />
+    <Property Name="itemID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="reason" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="refundedAmount" Type="Double" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="SalesReturn" Relationship="eDMSIssuance.FK_tblReturnedItems_tblSalesReturn" FromRole="tblReturnedItems" ToRole="tblSalesReturn" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="branchID" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="customerID" Type="Int32" />
+    <Property Name="processedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="receiptID" Type="Int32" />
+    <Property Name="authorizedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDelete" Type="Boolean" />
+    <NavigationProperty Name="Branch" Relationship="eDMSIssuance.FK_tblSales_tblBranch" FromRole="tblSales" ToRole="tblBranch" />
+    <NavigationProperty Name="CreditPayment" Relationship="eDMSIssuance.FK_tblCreditPayment_tblSales" FromRole="tblSales" ToRole="tblCreditPayment" />
+    <NavigationProperty Name="Customer" Relationship="eDMSIssuance.FK_tblSales_tblCustomer" FromRole="tblSales" ToRole="tblCustomer" />
+    <NavigationProperty Name="ItemRequest" Relationship="eDMSIssuance.FK_tblItemRequest_tblSales" FromRole="tblSales" ToRole="tblItemRequest" />
+    <NavigationProperty Name="SalesDetails" Relationship="eDMSIssuance.FK_tblSalesDetail_tblSales1" FromRole="tblSales" ToRole="tblSalesDetail" />
+    <NavigationProperty Name="SalesReturns" Relationship="eDMSIssuance.FK_tblSalesReturn_tblSales" FromRole="tblSales" ToRole="tblSalesReturn" />
+  </EntityType>
+  <EntityType Name="SalesDetail">
+    <Key>
+      <PropertyRef Name="salesID" />
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="salesID" Type="Int32" Nullable="false" />
+    <Property Name="itemID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isSalesCredit" Type="Boolean" />
+    <Property Name="salesFrom" Type="Int32" />
+    <Property Name="quantity" Type="Int64" />
+    <Property Name="discount" Type="Double" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Sale" Relationship="eDMSIssuance.FK_tblSalesDetail_tblSales1" FromRole="tblSalesDetail" ToRole="tblSales" />
+  </EntityType>
+  <EntityType Name="SalesReturn">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="salesID" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="processedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="ReturnedItems" Relationship="eDMSIssuance.FK_tblReturnedItems_tblSalesReturn" FromRole="tblSalesReturn" ToRole="tblReturnedItems" />
+    <NavigationProperty Name="Sale" Relationship="eDMSIssuance.FK_tblSalesReturn_tblSales" FromRole="tblSalesReturn" ToRole="tblSales" />
+  </EntityType>
+  <Association Name="FK_tblCreditPayment_lkCreditStatus">
+    <End Role="lkCreditStatus" Type="eDMSIssuance.CreditStatus" Multiplicity="0..1" />
+    <End Role="tblCreditPayment" Type="eDMSIssuance.CreditPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkCreditStatus">
+        <PropertyRef Name="lkCreditSatusID" />
+      </Principal>
+      <Dependent Role="tblCreditPayment">
+        <PropertyRef Name="rlkCreditStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkTaxType">
+    <End Role="lkTaxType" Type="eDMSIssuance.TaxType" Multiplicity="0..1" />
+    <End Role="tblItem" Type="eDMSIssuance.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkTaxType">
+        <PropertyRef Name="lkTaxTypeID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkTaxTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblIssuance_tblBranch">
+    <End Role="tblBranch" Type="eDMSIssuance.Branch" Multiplicity="0..1" />
+    <End Role="tblIssuance" Type="eDMSIssuance.Issuance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblIssuance">
+        <PropertyRef Name="issuedTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItemRequest_tblBranch">
+    <End Role="tblBranch" Type="eDMSIssuance.Branch" Multiplicity="0..1" />
+    <End Role="tblItemRequest" Type="eDMSIssuance.ItemRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblItemRequest">
+        <PropertyRef Name="branchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSales_tblBranch">
+    <End Role="tblBranch" Type="eDMSIssuance.Branch" Multiplicity="0..1" />
+    <End Role="tblSales" Type="eDMSIssuance.Sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSales">
+        <PropertyRef Name="branchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCreditPayment_tblSales">
+    <End Role="tblSales" Type="eDMSIssuance.Sale" Multiplicity="1" />
+    <End Role="tblCreditPayment" Type="eDMSIssuance.CreditPayment" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCreditPayment">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSales_tblCustomer">
+    <End Role="tblCustomer" Type="eDMSIssuance.Customer" Multiplicity="0..1" />
+    <End Role="tblSales" Type="eDMSIssuance.Sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSales">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblIssuedItems_tblIssuance1">
+    <End Role="tblIssuance" Type="eDMSIssuance.Issuance" Multiplicity="1" />
+    <End Role="tblIssuedItems" Type="eDMSIssuance.IssuedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblIssuance">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblIssuedItems">
+        <PropertyRef Name="issuanceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblIssuedItems_tblItem">
+    <End Role="tblItem" Type="eDMSIssuance.Item" Multiplicity="1" />
+    <End Role="tblIssuedItems" Type="eDMSIssuance.IssuedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblIssuedItems">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItemRequest_tblSales">
+    <End Role="tblSales" Type="eDMSIssuance.Sale" Multiplicity="1" />
+    <End Role="tblItemRequest" Type="eDMSIssuance.ItemRequest" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblItemRequest">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReturnedItems_tblSalesReturn">
+    <End Role="tblSalesReturn" Type="eDMSIssuance.SalesReturn" Multiplicity="1" />
+    <End Role="tblReturnedItems" Type="eDMSIssuance.ReturnedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSalesReturn">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblReturnedItems">
+        <PropertyRef Name="salesReturnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesDetail_tblSales1">
+    <End Role="tblSales" Type="eDMSIssuance.Sale" Multiplicity="1" />
+    <End Role="tblSalesDetail" Type="eDMSIssuance.SalesDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSalesDetail">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesReturn_tblSales">
+    <End Role="tblSales" Type="eDMSIssuance.Sale" Multiplicity="0..1" />
+    <End Role="tblSalesReturn" Type="eDMSIssuance.SalesReturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSalesReturn">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="kebele" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="woreda" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subcity" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="city_town" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="street" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="houseNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pobox" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="primaryEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="secondaryEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="state_region" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="country" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="zipCode_postalCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="additionalInfo" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="createdBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="createdDate" Precision="3" />
+    <Property Type="String" Name="lastUpdatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="lastUpdatedDate" Precision="3" />
+    <Property Type="Boolean" Name="isDeleted" />
+    <NavigationProperty Name="CompanyInfos" Relationship="eDMSIssuance.tblCompanyInfoAddress" FromRole="tblAddress" ToRole="CompanyInfo" />
+    <NavigationProperty Name="Branches" Relationship="eDMSIssuance.tblBranchAddress" FromRole="Address" ToRole="Branch" />
+    <NavigationProperty Name="Customers" Relationship="eDMSIssuance.tblCustomerAddress" FromRole="Address" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="TelephoneFax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="type" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="number" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="createdBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="createdDate" Precision="3" />
+    <Property Type="String" Name="lastUpdatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="lastUpdatedDate" Precision="3" />
+    <Property Type="Boolean" Name="isActive" />
+    <Property Type="Boolean" Name="isDeleted" />
+    <NavigationProperty Name="Customers" Relationship="eDMSIssuance.tblCustomerTelephoneFax" FromRole="TelephoneFax" ToRole="Customer" />
+    <NavigationProperty Name="tblBranches" Relationship="eDMSIssuance.tblBranchTelephoneFax" FromRole="TelephoneFax" ToRole="Branch" />
+    <NavigationProperty Name="tblCompanyInfoes" Relationship="eDMSIssuance.tblCompanyInfoTelephoneFax" FromRole="TelephoneFax" ToRole="CompanyInfo" />
+  </EntityType>
+  <Association Name="tblCompanyInfoAddress">
+    <End Type="eDMSIssuance.Address" Role="tblAddress" Multiplicity="*" />
+    <End Type="eDMSIssuance.CompanyInfo2" Role="CompanyInfo" Multiplicity="*" />
+  </Association>
+  <Association Name="tblCustomerTelephoneFax">
+    <End Type="eDMSIssuance.Customer" Role="Customer" Multiplicity="*" />
+    <End Type="eDMSIssuance.TelephoneFax" Role="TelephoneFax" Multiplicity="*" />
+  </Association>
+  <Association Name="tblBranchTelephoneFax">
+    <End Type="eDMSIssuance.Branch" Role="Branch" Multiplicity="*" />
+    <End Type="eDMSIssuance.TelephoneFax" Role="TelephoneFax" Multiplicity="*" />
+  </Association>
+  <Association Name="tblCompanyInfoTelephoneFax">
+    <End Type="eDMSIssuance.CompanyInfo2" Role="CompanyInfo" Multiplicity="*" />
+    <End Type="eDMSIssuance.TelephoneFax" Role="TelephoneFax" Multiplicity="*" />
+  </Association>
+  <Association Name="tblBranchAddress">
+    <End Type="eDMSIssuance.Address" Role="Address" Multiplicity="*" />
+    <End Type="eDMSIssuance.Branch" Role="Branch" Multiplicity="*" />
+  </Association>
+  <Association Name="tblCustomerAddress">
+    <End Type="eDMSIssuance.Address" Role="Address" Multiplicity="*" />
+    <End Type="eDMSIssuance.Customer" Role="Customer" Multiplicity="*" />
+  </Association>
+</Schema>

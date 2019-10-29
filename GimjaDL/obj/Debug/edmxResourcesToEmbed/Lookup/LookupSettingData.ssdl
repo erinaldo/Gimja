@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LookupeDMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LookupeDMSModelStoreContainer">
+    <EntitySet Name="lkBrand" EntityType="LookupeDMSModel.Store.lkBrand" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkCategory" EntityType="LookupeDMSModel.Store.lkCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkCreditStatus" EntityType="LookupeDMSModel.Store.lkCreditStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkManufacturer" EntityType="LookupeDMSModel.Store.lkManufacturer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkSupplier" EntityType="LookupeDMSModel.Store.lkSupplier" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkTaxType" EntityType="LookupeDMSModel.Store.lkTaxType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkUnit" EntityType="LookupeDMSModel.Store.lkUnit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAddress" EntityType="LookupeDMSModel.Store.tblAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblManufacturerAddress" EntityType="LookupeDMSModel.Store.tblManufacturerAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblManufacturerTelephoneFax" EntityType="LookupeDMSModel.Store.tblManufacturerTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTelephoneFax" EntityType="LookupeDMSModel.Store.tblTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tblManufacturerAddress_lkManufacturer" Association="LookupeDMSModel.Store.FK_tblManufacturerAddress_lkManufacturer">
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+      <End Role="tblManufacturerAddress" EntitySet="tblManufacturerAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblManufacturerAddress_tblAddress" Association="LookupeDMSModel.Store.FK_tblManufacturerAddress_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblManufacturerAddress" EntitySet="tblManufacturerAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblManufacturerTelephoneFax_lkManufacturer" Association="LookupeDMSModel.Store.FK_tblManufacturerTelephoneFax_lkManufacturer">
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+      <End Role="tblManufacturerTelephoneFax" EntitySet="tblManufacturerTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblManufacturerTelephoneFax_tblTelephoneFax" Association="LookupeDMSModel.Store.FK_tblManufacturerTelephoneFax_tblTelephoneFax">
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+      <End Role="tblManufacturerTelephoneFax" EntitySet="tblManufacturerTelephoneFax" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="lkBrand">
+    <Key>
+      <PropertyRef Name="lkBrandID" />
+    </Key>
+    <Property Name="lkBrandID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkCategory">
+    <Key>
+      <PropertyRef Name="lkCategoryID" />
+    </Key>
+    <Property Name="lkCategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkCreditStatus">
+    <Key>
+      <PropertyRef Name="lkCreditSatusID" />
+    </Key>
+    <Property Name="lkCreditSatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkManufacturer">
+    <Key>
+      <PropertyRef Name="lkManufacturerID" />
+    </Key>
+    <Property Name="lkManufacturerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="contactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkSupplier">
+    <Key>
+      <PropertyRef Name="lkSupplierID" />
+    </Key>
+    <Property Name="lkSupplierID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyName" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="contactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkTaxType">
+    <Key>
+      <PropertyRef Name="lkTaxTypeID" />
+    </Key>
+    <Property Name="lkTaxTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="taxTypeName" Type="varchar" MaxLength="50" />
+    <Property Name="rate" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkUnit">
+    <Key>
+      <PropertyRef Name="lkUnitID" />
+    </Key>
+    <Property Name="lkUnitID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="unitName" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="nchar" MaxLength="10" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblAddress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kebele" Type="varchar" MaxLength="50" />
+    <Property Name="woreda" Type="varchar" MaxLength="50" />
+    <Property Name="subcity" Type="varchar" MaxLength="50" />
+    <Property Name="city_town" Type="varchar" MaxLength="50" />
+    <Property Name="street" Type="varchar" MaxLength="50" />
+    <Property Name="houseNo" Type="varchar" MaxLength="50" />
+    <Property Name="pobox" Type="varchar" MaxLength="50" />
+    <Property Name="primaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="secondaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="state_region" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="zipCode_postalCode" Type="varchar" MaxLength="50" />
+    <Property Name="additionalInfo" Type="text" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblManufacturerAddress">
+    <Key>
+      <PropertyRef Name="rlkManufacturerID" />
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="rlkManufacturerID" Type="int" Nullable="false" />
+    <Property Name="addressID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblManufacturerTelephoneFax">
+    <Key>
+      <PropertyRef Name="rlkManufacturerID" />
+      <PropertyRef Name="telephoneFaxID" />
+    </Key>
+    <Property Name="rlkManufacturerID" Type="int" Nullable="false" />
+    <Property Name="telephoneFaxID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTelephoneFax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="number" Type="varchar" MaxLength="50" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <Association Name="FK_tblManufacturerAddress_lkManufacturer">
+    <End Role="lkManufacturer" Type="LookupeDMSModel.Store.lkManufacturer" Multiplicity="1" />
+    <End Role="tblManufacturerAddress" Type="LookupeDMSModel.Store.tblManufacturerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblManufacturerAddress">
+        <PropertyRef Name="rlkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblManufacturerAddress_tblAddress">
+    <End Role="tblAddress" Type="LookupeDMSModel.Store.tblAddress" Multiplicity="1" />
+    <End Role="tblManufacturerAddress" Type="LookupeDMSModel.Store.tblManufacturerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblManufacturerAddress">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblManufacturerTelephoneFax_lkManufacturer">
+    <End Role="lkManufacturer" Type="LookupeDMSModel.Store.lkManufacturer" Multiplicity="1" />
+    <End Role="tblManufacturerTelephoneFax" Type="LookupeDMSModel.Store.tblManufacturerTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblManufacturerTelephoneFax">
+        <PropertyRef Name="rlkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblManufacturerTelephoneFax_tblTelephoneFax">
+    <End Role="tblTelephoneFax" Type="LookupeDMSModel.Store.tblTelephoneFax" Multiplicity="1" />
+    <End Role="tblManufacturerTelephoneFax" Type="LookupeDMSModel.Store.tblManufacturerTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTelephoneFax">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblManufacturerTelephoneFax">
+        <PropertyRef Name="telephoneFaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

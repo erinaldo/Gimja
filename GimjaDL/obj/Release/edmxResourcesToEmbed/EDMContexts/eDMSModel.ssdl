@@ -1,0 +1,1434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eDMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="eDMSModelStoreContainer">
+    <EntitySet Name="lkBrand" EntityType="eDMSModel.Store.lkBrand" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkCategory" EntityType="eDMSModel.Store.lkCategory" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkCreditStatus" EntityType="eDMSModel.Store.lkCreditStatus" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkManufacturer" EntityType="eDMSModel.Store.lkManufacturer" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkMenuType" EntityType="eDMSModel.Store.lkMenuType" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkSalesLocation" EntityType="eDMSModel.Store.lkSalesLocation" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkSupplier" EntityType="eDMSModel.Store.lkSupplier" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkTaxType" EntityType="eDMSModel.Store.lkTaxType" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkTelephoneFaxType" EntityType="eDMSModel.Store.lkTelephoneFaxType" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkUnit" EntityType="eDMSModel.Store.lkUnit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="lkWarehouse" EntityType="eDMSModel.Store.lkWarehouse" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblAddress" EntityType="eDMSModel.Store.tblAddress" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblBranch" EntityType="eDMSModel.Store.tblBranch" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblCompanyInfo" EntityType="eDMSModel.Store.tblCompanyInfo" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblCreditPayment" EntityType="eDMSModel.Store.tblCreditPayment" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblCustomer" EntityType="eDMSModel.Store.tblCustomer" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblForm" EntityType="eDMSModel.Store.tblForm" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblIssuance" EntityType="eDMSModel.Store.tblIssuance" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblIssuedItems" EntityType="eDMSModel.Store.tblIssuedItems" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblItem" EntityType="eDMSModel.Store.tblItem" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblItemRequest" EntityType="eDMSModel.Store.tblItemRequest" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblMenu" EntityType="eDMSModel.Store.tblMenu" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblMenuRole" EntityType="eDMSModel.Store.tblMenuRole" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblPurchaseOrder" EntityType="eDMSModel.Store.tblPurchaseOrder" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblPurchaseOrderDetail" EntityType="eDMSModel.Store.tblPurchaseOrderDetail" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblReceipt" EntityType="eDMSModel.Store.tblReceipt" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblReceivedItems" EntityType="eDMSModel.Store.tblReceivedItems" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblReturnedItems" EntityType="eDMSModel.Store.tblReturnedItems" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblRole" EntityType="eDMSModel.Store.tblRole" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblSales" EntityType="eDMSModel.Store.tblSales" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblSalesDetail" EntityType="eDMSModel.Store.tblSalesDetail" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblSalesReturn" EntityType="eDMSModel.Store.tblSalesReturn" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblStocktaking" EntityType="eDMSModel.Store.tblStocktaking" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblSyncLog" EntityType="eDMSModel.Store.tblSyncLog" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblSyncTransaction" EntityType="eDMSModel.Store.tblSyncTransaction" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblTelephoneFax" EntityType="eDMSModel.Store.tblTelephoneFax" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblUser" EntityType="eDMSModel.Store.tblUser" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblUserLocation" EntityType="eDMSModel.Store.tblUserLocation" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblUserRole" EntityType="eDMSModel.Store.tblUserRole" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <AssociationSet Name="FK_lkManufacturer_tblAddress" Association="eDMSModel.Store.FK_lkManufacturer_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lkSupplier_tblAddress" Association="eDMSModel.Store.FK_lkSupplier_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="lkSupplier" EntitySet="lkSupplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lkWarehouse_tblAddress" Association="eDMSModel.Store.FK_lkWarehouse_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="lkWarehouse" EntitySet="lkWarehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBranch_tblAddress" Association="eDMSModel.Store.FK_tblBranch_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblBranch" EntitySet="tblBranch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCompanyInfo_tblAddress" Association="eDMSModel.Store.FK_tblCompanyInfo_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblCompanyInfo" EntitySet="tblCompanyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCreditPayment_lkCreditStatus" Association="eDMSModel.Store.FK_tblCreditPayment_lkCreditStatus">
+      <End Role="lkCreditStatus" EntitySet="lkCreditStatus" />
+      <End Role="tblCreditPayment" EntitySet="tblCreditPayment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCreditPayment_tblSales" Association="eDMSModel.Store.FK_tblCreditPayment_tblSales">
+      <End Role="tblSales" EntitySet="tblSales" />
+      <End Role="tblCreditPayment" EntitySet="tblCreditPayment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCustomer_tblAddress" Association="eDMSModel.Store.FK_tblCustomer_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblForm_tblMenu" Association="eDMSModel.Store.FK_tblForm_tblMenu">
+      <End Role="tblMenu" EntitySet="tblMenu" />
+      <End Role="tblForm" EntitySet="tblForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblIssuance_tblBranch" Association="eDMSModel.Store.FK_tblIssuance_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblIssuance" EntitySet="tblIssuance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblIssuedItems_tblIssuance" Association="eDMSModel.Store.FK_tblIssuedItems_tblIssuance">
+      <End Role="tblIssuance" EntitySet="tblIssuance" />
+      <End Role="tblIssuedItems" EntitySet="tblIssuedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblIssuedItems_tblItem" Association="eDMSModel.Store.FK_tblIssuedItems_tblItem">
+      <End Role="tblItem" EntitySet="tblItem" />
+      <End Role="tblIssuedItems" EntitySet="tblIssuedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkBrand" Association="eDMSModel.Store.FK_tblItem_lkBrand">
+      <End Role="lkBrand" EntitySet="lkBrand" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkCategory" Association="eDMSModel.Store.FK_tblItem_lkCategory">
+      <End Role="lkCategory" EntitySet="lkCategory" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkTaxType" Association="eDMSModel.Store.FK_tblItem_lkTaxType">
+      <End Role="lkTaxType" EntitySet="lkTaxType" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkUnit" Association="eDMSModel.Store.FK_tblItem_lkUnit">
+      <End Role="lkUnit" EntitySet="lkUnit" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItemRequest_tblBranch" Association="eDMSModel.Store.FK_tblItemRequest_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblItemRequest" EntitySet="tblItemRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItemRequest_tblSales" Association="eDMSModel.Store.FK_tblItemRequest_tblSales">
+      <End Role="tblSales" EntitySet="tblSales" />
+      <End Role="tblItemRequest" EntitySet="tblItemRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMenu_lkMenuType" Association="eDMSModel.Store.FK_tblMenu_lkMenuType">
+      <End Role="lkMenuType" EntitySet="lkMenuType" />
+      <End Role="tblMenu" EntitySet="tblMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMenuRole_tblMenu" Association="eDMSModel.Store.FK_tblMenuRole_tblMenu">
+      <End Role="tblMenu" EntitySet="tblMenu" />
+      <End Role="tblMenuRole" EntitySet="tblMenuRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMenuRole_tblRole" Association="eDMSModel.Store.FK_tblMenuRole_tblRole">
+      <End Role="tblRole" EntitySet="tblRole" />
+      <End Role="tblMenuRole" EntitySet="tblMenuRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPurchaseOrderDetail_tblItem" Association="eDMSModel.Store.FK_tblPurchaseOrderDetail_tblItem">
+      <End Role="tblItem" EntitySet="tblItem" />
+      <End Role="tblPurchaseOrderDetail" EntitySet="tblPurchaseOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPurchaseOrderDetail_tblPurchaseOrder" Association="eDMSModel.Store.FK_tblPurchaseOrderDetail_tblPurchaseOrder">
+      <End Role="tblPurchaseOrder" EntitySet="tblPurchaseOrder" />
+      <End Role="tblPurchaseOrderDetail" EntitySet="tblPurchaseOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceipt_lkSupplier" Association="eDMSModel.Store.FK_tblReceipt_lkSupplier">
+      <End Role="lkSupplier" EntitySet="lkSupplier" />
+      <End Role="tblReceipt" EntitySet="tblReceipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_lkManufacturer" Association="eDMSModel.Store.FK_tblReceivedItems_lkManufacturer">
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+      <End Role="tblReceivedItems" EntitySet="tblReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_tblItem" Association="eDMSModel.Store.FK_tblReceivedItems_tblItem">
+      <End Role="tblItem" EntitySet="tblItem" />
+      <End Role="tblReceivedItems" EntitySet="tblReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_tblReceipt" Association="eDMSModel.Store.FK_tblReceivedItems_tblReceipt">
+      <End Role="tblReceipt" EntitySet="tblReceipt" />
+      <End Role="tblReceivedItems" EntitySet="tblReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReturnedItems_tblItem" Association="eDMSModel.Store.FK_tblReturnedItems_tblItem">
+      <End Role="tblItem" EntitySet="tblItem" />
+      <End Role="tblReturnedItems" EntitySet="tblReturnedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReturnedItems_tblSalesReturn" Association="eDMSModel.Store.FK_tblReturnedItems_tblSalesReturn">
+      <End Role="tblSalesReturn" EntitySet="tblSalesReturn" />
+      <End Role="tblReturnedItems" EntitySet="tblReturnedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSales_tblBranch" Association="eDMSModel.Store.FK_tblSales_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblSales" EntitySet="tblSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSales_tblCustomer" Association="eDMSModel.Store.FK_tblSales_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblSales" EntitySet="tblSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesDetail_lkSalesLocation" Association="eDMSModel.Store.FK_tblSalesDetail_lkSalesLocation">
+      <End Role="lkSalesLocation" EntitySet="lkSalesLocation" />
+      <End Role="tblSalesDetail" EntitySet="tblSalesDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesDetail_tblItem" Association="eDMSModel.Store.FK_tblSalesDetail_tblItem">
+      <End Role="tblItem" EntitySet="tblItem" />
+      <End Role="tblSalesDetail" EntitySet="tblSalesDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesDetail_tblSales" Association="eDMSModel.Store.FK_tblSalesDetail_tblSales">
+      <End Role="tblSales" EntitySet="tblSales" />
+      <End Role="tblSalesDetail" EntitySet="tblSalesDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesReturn_tblSales" Association="eDMSModel.Store.FK_tblSalesReturn_tblSales">
+      <End Role="tblSales" EntitySet="tblSales" />
+      <End Role="tblSalesReturn" EntitySet="tblSalesReturn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_lkManufacturer" Association="eDMSModel.Store.FK_tblTelephoneFax_lkManufacturer">
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_lkSupplier" Association="eDMSModel.Store.FK_tblTelephoneFax_lkSupplier">
+      <End Role="lkSupplier" EntitySet="lkSupplier" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_lkTelephoneFaxType" Association="eDMSModel.Store.FK_tblTelephoneFax_lkTelephoneFaxType">
+      <End Role="lkTelephoneFaxType" EntitySet="lkTelephoneFaxType" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_lkWarehouse" Association="eDMSModel.Store.FK_tblTelephoneFax_lkWarehouse">
+      <End Role="lkWarehouse" EntitySet="lkWarehouse" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_tblBranch" Association="eDMSModel.Store.FK_tblTelephoneFax_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_tblCompanyInfo" Association="eDMSModel.Store.FK_tblTelephoneFax_tblCompanyInfo">
+      <End Role="tblCompanyInfo" EntitySet="tblCompanyInfo" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_tblCustomer" Association="eDMSModel.Store.FK_tblTelephoneFax_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTelephoneFax_tblUser" Association="eDMSModel.Store.FK_tblTelephoneFax_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUser_tblAddress" Association="eDMSModel.Store.FK_tblUser_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblUser" EntitySet="tblUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserLocation_lkWarehouse" Association="eDMSModel.Store.FK_tblUserLocation_lkWarehouse">
+      <End Role="lkWarehouse" EntitySet="lkWarehouse" />
+      <End Role="tblUserLocation" EntitySet="tblUserLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserLocation_tblBranch" Association="eDMSModel.Store.FK_tblUserLocation_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblUserLocation" EntitySet="tblUserLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserLocation_tblUser" Association="eDMSModel.Store.FK_tblUserLocation_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserLocation" EntitySet="tblUserLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserRole_tblRole" Association="eDMSModel.Store.FK_tblUserRole_tblRole">
+      <End Role="tblRole" EntitySet="tblRole" />
+      <End Role="tblUserRole" EntitySet="tblUserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserRole_tblUser" Association="eDMSModel.Store.FK_tblUserRole_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserRole" EntitySet="tblUserRole" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="lkBrand">
+    <Key>
+      <PropertyRef Name="lkBrandID" />
+    </Key>
+    <Property Name="lkBrandID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkCategory">
+    <Key>
+      <PropertyRef Name="lkCategoryID" />
+    </Key>
+    <Property Name="lkCategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkCreditStatus">
+    <Key>
+      <PropertyRef Name="lkCreditSatusID" />
+    </Key>
+    <Property Name="lkCreditSatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkManufacturer">
+    <Key>
+      <PropertyRef Name="lkManufacturerID" />
+    </Key>
+    <Property Name="lkManufacturerID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="contactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="addressID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lkMenuType">
+    <Key>
+      <PropertyRef Name="lkMenuTypeID" />
+    </Key>
+    <Property Name="lkMenuTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="parent" Type="int" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkSalesLocation">
+    <Key>
+      <PropertyRef Name="lkSalesLocationID" />
+    </Key>
+    <Property Name="lkSalesLocationID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lkSupplier">
+    <Key>
+      <PropertyRef Name="lkSupplierID" />
+    </Key>
+    <Property Name="lkSupplierID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="companyName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="contactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="addressID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lkTaxType">
+    <Key>
+      <PropertyRef Name="lkTaxTypeID" />
+    </Key>
+    <Property Name="lkTaxTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="taxTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="rate" Type="float" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="lkTelephoneFaxType">
+    <Key>
+      <PropertyRef Name="lkTelephoneFaxTypeID" />
+    </Key>
+    <Property Name="lkTelephoneFaxTypeID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="lkUnit">
+    <Key>
+      <PropertyRef Name="lkUnitID" />
+    </Key>
+    <Property Name="lkUnitID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="unitName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkWarehouse">
+    <Key>
+      <PropertyRef Name="lkWarehouseID" />
+    </Key>
+    <Property Name="lkWarehouseID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="1024" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="addressID" Type="uniqueidentifier" />
+    <Property Name="isDefault" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAddress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="kebele" Type="varchar" MaxLength="50" />
+    <Property Name="woreda" Type="varchar" MaxLength="50" />
+    <Property Name="subcity" Type="varchar" MaxLength="50" />
+    <Property Name="city_town" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="street" Type="varchar" MaxLength="50" />
+    <Property Name="houseNo" Type="varchar" MaxLength="50" />
+    <Property Name="pobox" Type="varchar" MaxLength="50" />
+    <Property Name="primaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="secondaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="state_region" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="zipCode_postalCode" Type="varchar" MaxLength="50" />
+    <Property Name="additionalInfo" Type="text" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblBranch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="addressID" Type="uniqueidentifier" />
+    <Property Name="isDefault" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCompanyInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="englishName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="amharicName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TINNumber" Type="varchar" MaxLength="50" />
+    <Property Name="VATRegistrationNo" Type="varchar" MaxLength="50" />
+    <Property Name="VATRegistrationDate" Type="datetime" />
+    <Property Name="logo" Type="image" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="addressID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblCreditPayment">
+    <Key>
+      <PropertyRef Name="salesID" />
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="salesID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="rlkCreditStatusID" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="processedBy" Type="varchar" MaxLength="20" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="fatherName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="grandfatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="companyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TINNo" Type="varchar" MaxLength="50" />
+    <Property Name="VATRegistrationNo" Type="varchar" MaxLength="50" />
+    <Property Name="VATRegistrationDate" Type="date" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="addressID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="menuID" Type="int" Nullable="false" />
+    <Property Name="formID" Type="varchar" MaxLength="50" />
+    <Property Name="formName" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblIssuance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="issuedTo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="issuedBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="approvedBy" Type="varchar" MaxLength="20" />
+    <Property Name="approvedDate" Type="datetime" />
+    <Property Name="storeID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="warehouseID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblIssuedItems">
+    <Key>
+      <PropertyRef Name="issuanceID" />
+      <PropertyRef Name="issueDetailID" />
+    </Key>
+    <Property Name="issuanceID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="issueDetailID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="noPack" Type="int" />
+    <Property Name="qtyPerPack" Type="int" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblItem">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="rlkBrandID" Type="int" Nullable="false" />
+    <Property Name="rlkCategoryID" Type="int" Nullable="false" />
+    <Property Name="origin" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="unitPrice" Type="float" Nullable="false" />
+    <Property Name="reorderLevel" Type="float" />
+    <Property Name="pickFaceQty" Type="float" />
+    <Property Name="rlkUnitID" Type="int" Nullable="false" />
+    <Property Name="orderQuantity" Type="float" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="rlkTaxTypeID" Type="int" />
+    <Property Name="isTaxExempted" Type="bit" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblItemRequest">
+    <Key>
+      <PropertyRef Name="salesID" />
+    </Key>
+    <Property Name="salesID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="branchID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="referenceNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="warehouseID" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblMenu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="rlkMenuTypeID" Type="int" Nullable="false" />
+    <Property Name="caption" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="icon" Type="image" />
+    <Property Name="parent" Type="int" Nullable="false" />
+    <Property Name="order" Type="int" Nullable="false" />
+    <Property Name="visible" Type="bit" Nullable="false" />
+    <Property Name="disabled" Type="bit" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblMenuRole">
+    <Key>
+      <PropertyRef Name="menuID" />
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="menuID" Type="int" Nullable="false" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPurchaseOrder">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="processedBy" Type="varchar" MaxLength="20" />
+    <Property Name="approvedBy" Type="varchar" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="supplierID" Type="varchar" MaxLength="20" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblPurchaseOrderDetail">
+    <Key>
+      <PropertyRef Name="purchaseOrderDetailID" />
+      <PropertyRef Name="purchaseOrderID" />
+    </Key>
+    <Property Name="purchaseOrderDetailID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="purchaseOrderID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="origin" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="unitPrice" Type="float" Nullable="false" />
+    <Property Name="lkManufacturerID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="remark" Type="text" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblReceipt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="rlkSupplierID" Type="varchar" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="receivedBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="approvedBy" Type="varchar" MaxLength="20" />
+    <Property Name="approvedDate" Type="datetime" />
+    <Property Name="storeID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="processedBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="isStoreWarehouse" Type="bit" />
+    <Property Name="receivedFrom" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="isApproved" Type="bit" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblReceivedItems">
+    <Key>
+      <PropertyRef Name="receiptID" />
+      <PropertyRef Name="receiptDetailID" />
+    </Key>
+    <Property Name="receiptID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="receiptDetailID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="rlkManufacturerID" Type="varchar" MaxLength="20" />
+    <Property Name="noPack" Type="int" />
+    <Property Name="qtyPerPack" Type="int" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="unitSellingPrice" Type="float" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblReturnedItems">
+    <Key>
+      <PropertyRef Name="salesReturnID" />
+      <PropertyRef Name="returnedDetailID" />
+    </Key>
+    <Property Name="salesReturnID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="returnedDetailID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="refundedAmount" Type="float" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="roleName" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="branchID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="customerID" Type="varchar" MaxLength="20" />
+    <Property Name="processedBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="receiptID" Type="varchar" MaxLength="20" />
+    <Property Name="referenceNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="authorizedBy" Type="varchar" MaxLength="20" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isVoid" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSalesDetail">
+    <Key>
+      <PropertyRef Name="salesID" />
+      <PropertyRef Name="salesDetailID" />
+    </Key>
+    <Property Name="salesID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="salesDetailID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="isSalesCredit" Type="bit" Nullable="false" />
+    <Property Name="salesFrom" Type="smallint" Nullable="false" />
+    <Property Name="unitPrice" Type="float" Nullable="false" />
+    <Property Name="quantity" Type="bigint" Nullable="false" />
+    <Property Name="discount" Type="float" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSalesReturn">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="salesID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="processedBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="reason" Type="varchar(max)" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblStocktaking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSyncLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="warehouseID" Type="varchar" MaxLength="20" />
+    <Property Name="userID" Type="varchar" MaxLength="20" />
+    <Property Name="syncTransactionID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblSyncTransaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="tableName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="action" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="value" Type="varchar(max)" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="branchID" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblTelephoneFax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="parentID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="type" Type="smallint" Nullable="false" />
+    <Property Name="number" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="fullName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="addressID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblUserLocation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="storeID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="startDate" Type="datetime" Nullable="false" />
+    <Property Name="endDate" Type="datetime" />
+    <Property Name="createdBy" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="createdDate" Type="datetime" Nullable="false" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="20" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblUserRole">
+    <Key>
+      <PropertyRef Name="userID" />
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="userID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_lkManufacturer_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="0..1" />
+    <End Role="lkManufacturer" Type="eDMSModel.Store.lkManufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lkManufacturer">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lkSupplier_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="0..1" />
+    <End Role="lkSupplier" Type="eDMSModel.Store.lkSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lkSupplier">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lkWarehouse_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="0..1" />
+    <End Role="lkWarehouse" Type="eDMSModel.Store.lkWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lkWarehouse">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBranch_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="0..1" />
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblBranch">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCompanyInfo_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="0..1" />
+    <End Role="tblCompanyInfo" Type="eDMSModel.Store.tblCompanyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCompanyInfo">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCreditPayment_lkCreditStatus">
+    <End Role="lkCreditStatus" Type="eDMSModel.Store.lkCreditStatus" Multiplicity="1" />
+    <End Role="tblCreditPayment" Type="eDMSModel.Store.tblCreditPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkCreditStatus">
+        <PropertyRef Name="lkCreditSatusID" />
+      </Principal>
+      <Dependent Role="tblCreditPayment">
+        <PropertyRef Name="rlkCreditStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCreditPayment_tblSales">
+    <End Role="tblSales" Type="eDMSModel.Store.tblSales" Multiplicity="1" />
+    <End Role="tblCreditPayment" Type="eDMSModel.Store.tblCreditPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCreditPayment">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCustomer_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="0..1" />
+    <End Role="tblCustomer" Type="eDMSModel.Store.tblCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCustomer">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblForm_tblMenu">
+    <End Role="tblMenu" Type="eDMSModel.Store.tblMenu" Multiplicity="1" />
+    <End Role="tblForm" Type="eDMSModel.Store.tblForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMenu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblForm">
+        <PropertyRef Name="menuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblIssuance_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="1" />
+    <End Role="tblIssuance" Type="eDMSModel.Store.tblIssuance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblIssuance">
+        <PropertyRef Name="issuedTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblIssuedItems_tblIssuance">
+    <End Role="tblIssuance" Type="eDMSModel.Store.tblIssuance" Multiplicity="1" />
+    <End Role="tblIssuedItems" Type="eDMSModel.Store.tblIssuedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblIssuance">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblIssuedItems">
+        <PropertyRef Name="issuanceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblIssuedItems_tblItem">
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="1" />
+    <End Role="tblIssuedItems" Type="eDMSModel.Store.tblIssuedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblIssuedItems">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkBrand">
+    <End Role="lkBrand" Type="eDMSModel.Store.lkBrand" Multiplicity="1" />
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkBrand">
+        <PropertyRef Name="lkBrandID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkBrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkCategory">
+    <End Role="lkCategory" Type="eDMSModel.Store.lkCategory" Multiplicity="1" />
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkCategory">
+        <PropertyRef Name="lkCategoryID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkTaxType">
+    <End Role="lkTaxType" Type="eDMSModel.Store.lkTaxType" Multiplicity="0..1" />
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkTaxType">
+        <PropertyRef Name="lkTaxTypeID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkTaxTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkUnit">
+    <End Role="lkUnit" Type="eDMSModel.Store.lkUnit" Multiplicity="1" />
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkUnit">
+        <PropertyRef Name="lkUnitID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItemRequest_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="1" />
+    <End Role="tblItemRequest" Type="eDMSModel.Store.tblItemRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblItemRequest">
+        <PropertyRef Name="branchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItemRequest_tblSales">
+    <End Role="tblSales" Type="eDMSModel.Store.tblSales" Multiplicity="1" />
+    <End Role="tblItemRequest" Type="eDMSModel.Store.tblItemRequest" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblItemRequest">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMenu_lkMenuType">
+    <End Role="lkMenuType" Type="eDMSModel.Store.lkMenuType" Multiplicity="1" />
+    <End Role="tblMenu" Type="eDMSModel.Store.tblMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkMenuType">
+        <PropertyRef Name="lkMenuTypeID" />
+      </Principal>
+      <Dependent Role="tblMenu">
+        <PropertyRef Name="rlkMenuTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMenuRole_tblMenu">
+    <End Role="tblMenu" Type="eDMSModel.Store.tblMenu" Multiplicity="1" />
+    <End Role="tblMenuRole" Type="eDMSModel.Store.tblMenuRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMenu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblMenuRole">
+        <PropertyRef Name="menuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMenuRole_tblRole">
+    <End Role="tblRole" Type="eDMSModel.Store.tblRole" Multiplicity="1" />
+    <End Role="tblMenuRole" Type="eDMSModel.Store.tblMenuRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblMenuRole">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPurchaseOrderDetail_tblItem">
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="1" />
+    <End Role="tblPurchaseOrderDetail" Type="eDMSModel.Store.tblPurchaseOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblPurchaseOrderDetail">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPurchaseOrderDetail_tblPurchaseOrder">
+    <End Role="tblPurchaseOrder" Type="eDMSModel.Store.tblPurchaseOrder" Multiplicity="1" />
+    <End Role="tblPurchaseOrderDetail" Type="eDMSModel.Store.tblPurchaseOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPurchaseOrder">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblPurchaseOrderDetail">
+        <PropertyRef Name="purchaseOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceipt_lkSupplier">
+    <End Role="lkSupplier" Type="eDMSModel.Store.lkSupplier" Multiplicity="0..1" />
+    <End Role="tblReceipt" Type="eDMSModel.Store.tblReceipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkSupplier">
+        <PropertyRef Name="lkSupplierID" />
+      </Principal>
+      <Dependent Role="tblReceipt">
+        <PropertyRef Name="rlkSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_lkManufacturer">
+    <End Role="lkManufacturer" Type="eDMSModel.Store.lkManufacturer" Multiplicity="0..1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.Store.tblReceivedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="rlkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_tblItem">
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.Store.tblReceivedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_tblReceipt">
+    <End Role="tblReceipt" Type="eDMSModel.Store.tblReceipt" Multiplicity="1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.Store.tblReceivedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblReceipt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="receiptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReturnedItems_tblItem">
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="1" />
+    <End Role="tblReturnedItems" Type="eDMSModel.Store.tblReturnedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblReturnedItems">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReturnedItems_tblSalesReturn">
+    <End Role="tblSalesReturn" Type="eDMSModel.Store.tblSalesReturn" Multiplicity="1" />
+    <End Role="tblReturnedItems" Type="eDMSModel.Store.tblReturnedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSalesReturn">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblReturnedItems">
+        <PropertyRef Name="salesReturnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSales_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="1" />
+    <End Role="tblSales" Type="eDMSModel.Store.tblSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSales">
+        <PropertyRef Name="branchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSales_tblCustomer">
+    <End Role="tblCustomer" Type="eDMSModel.Store.tblCustomer" Multiplicity="0..1" />
+    <End Role="tblSales" Type="eDMSModel.Store.tblSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSales">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesDetail_lkSalesLocation">
+    <End Role="lkSalesLocation" Type="eDMSModel.Store.lkSalesLocation" Multiplicity="1" />
+    <End Role="tblSalesDetail" Type="eDMSModel.Store.tblSalesDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkSalesLocation">
+        <PropertyRef Name="lkSalesLocationID" />
+      </Principal>
+      <Dependent Role="tblSalesDetail">
+        <PropertyRef Name="salesFrom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesDetail_tblItem">
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="1" />
+    <End Role="tblSalesDetail" Type="eDMSModel.Store.tblSalesDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblSalesDetail">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesDetail_tblSales">
+    <End Role="tblSales" Type="eDMSModel.Store.tblSales" Multiplicity="1" />
+    <End Role="tblSalesDetail" Type="eDMSModel.Store.tblSalesDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSalesDetail">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesReturn_tblSales">
+    <End Role="tblSales" Type="eDMSModel.Store.tblSales" Multiplicity="1" />
+    <End Role="tblSalesReturn" Type="eDMSModel.Store.tblSalesReturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSales">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSalesReturn">
+        <PropertyRef Name="salesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_lkManufacturer">
+    <End Role="lkManufacturer" Type="eDMSModel.Store.lkManufacturer" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_lkSupplier">
+    <End Role="lkSupplier" Type="eDMSModel.Store.lkSupplier" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkSupplier">
+        <PropertyRef Name="lkSupplierID" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_lkTelephoneFaxType">
+    <End Role="lkTelephoneFaxType" Type="eDMSModel.Store.lkTelephoneFaxType" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkTelephoneFaxType">
+        <PropertyRef Name="lkTelephoneFaxTypeID" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_lkWarehouse">
+    <End Role="lkWarehouse" Type="eDMSModel.Store.lkWarehouse" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkWarehouse">
+        <PropertyRef Name="lkWarehouseID" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_tblCompanyInfo">
+    <End Role="tblCompanyInfo" Type="eDMSModel.Store.tblCompanyInfo" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompanyInfo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_tblCustomer">
+    <End Role="tblCustomer" Type="eDMSModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTelephoneFax_tblUser">
+    <End Role="tblUser" Type="eDMSModel.Store.tblUser" Multiplicity="1" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="tblTelephoneFax">
+        <PropertyRef Name="parentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUser_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="0..1" />
+    <End Role="tblUser" Type="eDMSModel.Store.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblUser">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserLocation_lkWarehouse">
+    <End Role="lkWarehouse" Type="eDMSModel.Store.lkWarehouse" Multiplicity="1" />
+    <End Role="tblUserLocation" Type="eDMSModel.Store.tblUserLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkWarehouse">
+        <PropertyRef Name="lkWarehouseID" />
+      </Principal>
+      <Dependent Role="tblUserLocation">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserLocation_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="1" />
+    <End Role="tblUserLocation" Type="eDMSModel.Store.tblUserLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblUserLocation">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserLocation_tblUser">
+    <End Role="tblUser" Type="eDMSModel.Store.tblUser" Multiplicity="1" />
+    <End Role="tblUserLocation" Type="eDMSModel.Store.tblUserLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="tblUserLocation">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserRole_tblRole">
+    <End Role="tblRole" Type="eDMSModel.Store.tblRole" Multiplicity="1" />
+    <End Role="tblUserRole" Type="eDMSModel.Store.tblUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblUserRole">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserRole_tblUser">
+    <End Role="tblUser" Type="eDMSModel.Store.tblUser" Multiplicity="1" />
+    <End Role="tblUserRole" Type="eDMSModel.Store.tblUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="tblUserRole">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GenerateID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tbl" Type="varchar(max)" Mode="In" />
+    <Parameter Name="namePrefix" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GenerateItemID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rlkBrandID" Type="int" Mode="In" />
+    <Parameter Name="rlkCategoryID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetFilteredCategories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rlkBrandID" Type="int" Mode="In" />
+  </Function>
+</Schema>

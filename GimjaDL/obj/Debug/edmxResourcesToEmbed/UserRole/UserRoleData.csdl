@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UserRoleeDMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UserRoleData" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="MenuTypes" EntityType="UserRoleeDMSModel.MenuType" />
+    <EntitySet Name="Menus" EntityType="UserRoleeDMSModel.Menu" />
+    <EntitySet Name="Roles" EntityType="UserRoleeDMSModel.Role" />
+    <EntitySet Name="Users" EntityType="UserRoleeDMSModel.User" />
+    <EntitySet Name="UserControls" EntityType="UserRoleeDMSModel.UserControl" />
+    <AssociationSet Name="FK_tblMenu_lkMenuType" Association="UserRoleeDMSModel.FK_tblMenu_lkMenuType">
+      <End Role="lkMenuType" EntitySet="MenuTypes" />
+      <End Role="tblMenu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMenu_tblUserControl" Association="UserRoleeDMSModel.FK_tblMenu_tblUserControl">
+      <End Role="tblUserControl" EntitySet="UserControls" />
+      <End Role="tblMenu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="tblMenuRole" Association="UserRoleeDMSModel.tblMenuRole">
+      <End Role="tblMenu" EntitySet="Menus" />
+      <End Role="tblRole" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="tblUserRole" Association="UserRoleeDMSModel.tblUserRole">
+      <End Role="tblRole" EntitySet="Roles" />
+      <End Role="tblUser" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="Addresses" EntityType="UserRoleeDMSModel.Address" />
+    <AssociationSet Name="tblUserAddress" Association="UserRoleeDMSModel.tblUserAddress">
+      <End Role="tblAddress" EntitySet="Addresses" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MenuType">
+    <Key>
+      <PropertyRef Name="lkMenuTypeID" />
+    </Key>
+    <Property Name="lkMenuTypeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Menus" Relationship="UserRoleeDMSModel.FK_tblMenu_lkMenuType" FromRole="lkMenuType" ToRole="tblMenu" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="rlkMenuTypeID" Type="Int32" />
+    <Property Name="caption" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="icon" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="visible" Type="Boolean" />
+    <Property Name="disabled" Type="Boolean" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="MenuType" Relationship="UserRoleeDMSModel.FK_tblMenu_lkMenuType" FromRole="tblMenu" ToRole="lkMenuType" />
+    <NavigationProperty Name="UserControl" Relationship="UserRoleeDMSModel.FK_tblMenu_tblUserControl" FromRole="tblMenu" ToRole="tblUserControl" />
+    <NavigationProperty Name="Roles" Relationship="UserRoleeDMSModel.tblMenuRole" FromRole="tblMenu" ToRole="tblRole" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="roleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDelete" Type="Boolean" />
+    <NavigationProperty Name="Menus" Relationship="UserRoleeDMSModel.tblMenuRole" FromRole="tblRole" ToRole="tblMenu" />
+    <NavigationProperty Name="Users" Relationship="UserRoleeDMSModel.tblUserRole" FromRole="tblRole" ToRole="tblUser" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fullName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Roles" Relationship="UserRoleeDMSModel.tblUserRole" FromRole="tblUser" ToRole="tblRole" />
+    <NavigationProperty Name="Addresses" Relationship="UserRoleeDMSModel.tblUserAddress" FromRole="User" ToRole="tblAddress" />
+  </EntityType>
+  <EntityType Name="UserControl">
+    <Key>
+      <PropertyRef Name="menuID" />
+    </Key>
+    <Property Name="menuID" Type="Int32" Nullable="false" />
+    <Property Name="ucName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="default" Type="Boolean" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Menu" Relationship="UserRoleeDMSModel.FK_tblMenu_tblUserControl" FromRole="tblUserControl" ToRole="tblMenu" />
+  </EntityType>
+  <Association Name="FK_tblMenu_lkMenuType">
+    <End Role="lkMenuType" Type="UserRoleeDMSModel.MenuType" Multiplicity="0..1" />
+    <End Role="tblMenu" Type="UserRoleeDMSModel.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkMenuType">
+        <PropertyRef Name="lkMenuTypeID" />
+      </Principal>
+      <Dependent Role="tblMenu">
+        <PropertyRef Name="rlkMenuTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMenu_tblUserControl">
+    <End Role="tblUserControl" Type="UserRoleeDMSModel.UserControl" Multiplicity="1" />
+    <End Role="tblMenu" Type="UserRoleeDMSModel.Menu" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserControl">
+        <PropertyRef Name="menuID" />
+      </Principal>
+      <Dependent Role="tblMenu">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblMenuRole">
+    <End Role="tblMenu" Type="UserRoleeDMSModel.Menu" Multiplicity="*" />
+    <End Role="tblRole" Type="UserRoleeDMSModel.Role" Multiplicity="*" />
+  </Association>
+  <Association Name="tblUserRole">
+    <End Role="tblRole" Type="UserRoleeDMSModel.Role" Multiplicity="*" />
+    <End Role="tblUser" Type="UserRoleeDMSModel.User" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="kebele" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="woreda" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subcity" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="city_town" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="street" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="houseNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pobox" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="primaryEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="secondaryEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="state_region" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="country" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="zipCode_postalCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="additionalInfo" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="createdBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="createdDate" Precision="3" />
+    <Property Type="String" Name="lastUpdatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="lastUpdatedDate" Precision="3" />
+    <Property Type="Boolean" Name="isDeleted" />
+    <NavigationProperty Name="Users" Relationship="UserRoleeDMSModel.tblUserAddress" FromRole="tblAddress" ToRole="User" />
+  </EntityType>
+  <Association Name="tblUserAddress">
+    <End Type="UserRoleeDMSModel.Address" Role="tblAddress" Multiplicity="*" />
+    <End Type="UserRoleeDMSModel.User" Role="User" Multiplicity="*" />
+  </Association>
+</Schema>

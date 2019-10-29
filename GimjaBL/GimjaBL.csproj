@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GimjaBL</RootNamespace>
+    <AssemblyName>GimjaBL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AddressBL.cs" />
+    <Compile Include="Common\ConvertBytesToImageBL.cs" />
+    <Compile Include="Common\SyncTransactionBL.cs" />
+    <Compile Include="Company\BranchBL.cs" />
+    <Compile Include="Company\CompanyProfileBL.cs" />
+    <Compile Include="Item\BrandBL.cs" />
+    <Compile Include="Item\CategoryBL.cs" />
+    <Compile Include="Common\CommonBL.cs" />
+    <Compile Include="Item\ItemCount.cs" />
+    <Compile Include="Profile\CustomerBL.cs" />
+    <Compile Include="Profile\HashPasswordBL.cs" />
+    <Compile Include="Issue\IssueBL.cs" />
+    <Compile Include="Item\ItemBL.cs" />
+    <Compile Include="Profile\ManufacturerBL.cs" />
+    <Compile Include="Menu Setting\MenuBL.cs" />
+    <Compile Include="Menu Setting\MenuTypeBL.cs" />
+    <Compile Include="Common\IDataManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrder\PurchaseOrderBL.cs" />
+    <Compile Include="Receipt\ReceiptBL.cs" />
+    <Compile Include="Receipt\ReceivedItemBL.cs" />
+    <Compile Include="Profile\RoleBL.cs" />
+    <Compile Include="Sales\CreditStatusBL.cs" />
+    <Compile Include="Sales\ItemRequestBL.cs" />
+    <Compile Include="Sales\SaleDetailBL.cs" />
+    <Compile Include="Sales\SaleLocationBL.cs" />
+    <Compile Include="Sales\SaleReturnBL.cs" />
+    <Compile Include="Sales\SalesBL.cs" />
+    <Compile Include="Common\Singleton.cs" />
+    <Compile Include="Profile\SupplierBL.cs" />
+    <Compile Include="Item\TaxTypeBL.cs" />
+    <Compile Include="Common\TelephoneFaxBL.cs" />
+    <Compile Include="Common\TelephoneFaxTypeBL.cs" />
+    <Compile Include="Item\UnitBL.cs" />
+    <Compile Include="Profile\UserBL.cs" />
+    <Compile Include="Company\WarehouseBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GimjaDL\GimjaDL.csproj">
+      <Project>{89e19479-50df-4f90-8d42-edf1859a3de7}</Project>
+      <Name>GimjaDL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Countries.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

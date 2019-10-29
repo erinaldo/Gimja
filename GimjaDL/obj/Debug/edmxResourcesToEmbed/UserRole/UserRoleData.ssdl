@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UserRoleeDMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="UserRoleeDMSModelStoreContainer">
+    <EntitySet Name="lkMenuType" EntityType="UserRoleeDMSModel.Store.lkMenuType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAddress" EntityType="UserRoleeDMSModel.Store.tblAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblMenu" EntityType="UserRoleeDMSModel.Store.tblMenu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblMenuRole" EntityType="UserRoleeDMSModel.Store.tblMenuRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblRole" EntityType="UserRoleeDMSModel.Store.tblRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUser" EntityType="UserRoleeDMSModel.Store.tblUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUserAddress" EntityType="UserRoleeDMSModel.Store.tblUserAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUserControl" EntityType="UserRoleeDMSModel.Store.tblUserControl" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUserRole" EntityType="UserRoleeDMSModel.Store.tblUserRole" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tblMenu_lkMenuType" Association="UserRoleeDMSModel.Store.FK_tblMenu_lkMenuType">
+      <End Role="lkMenuType" EntitySet="lkMenuType" />
+      <End Role="tblMenu" EntitySet="tblMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMenu_tblUserControl" Association="UserRoleeDMSModel.Store.FK_tblMenu_tblUserControl">
+      <End Role="tblUserControl" EntitySet="tblUserControl" />
+      <End Role="tblMenu" EntitySet="tblMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMenuRole_tblMenu" Association="UserRoleeDMSModel.Store.FK_tblMenuRole_tblMenu">
+      <End Role="tblMenu" EntitySet="tblMenu" />
+      <End Role="tblMenuRole" EntitySet="tblMenuRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMenuRole_tblRole" Association="UserRoleeDMSModel.Store.FK_tblMenuRole_tblRole">
+      <End Role="tblRole" EntitySet="tblRole" />
+      <End Role="tblMenuRole" EntitySet="tblMenuRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserAddress_tblAddress" Association="UserRoleeDMSModel.Store.FK_tblUserAddress_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblUserAddress" EntitySet="tblUserAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserAddress_tblUser" Association="UserRoleeDMSModel.Store.FK_tblUserAddress_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserAddress" EntitySet="tblUserAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserRole_tblRole" Association="UserRoleeDMSModel.Store.FK_tblUserRole_tblRole">
+      <End Role="tblRole" EntitySet="tblRole" />
+      <End Role="tblUserRole" EntitySet="tblUserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserRole_tblUser" Association="UserRoleeDMSModel.Store.FK_tblUserRole_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserRole" EntitySet="tblUserRole" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="lkMenuType">
+    <Key>
+      <PropertyRef Name="lkMenuTypeID" />
+    </Key>
+    <Property Name="lkMenuTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblAddress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kebele" Type="varchar" MaxLength="50" />
+    <Property Name="woreda" Type="varchar" MaxLength="50" />
+    <Property Name="subcity" Type="varchar" MaxLength="50" />
+    <Property Name="city_town" Type="varchar" MaxLength="50" />
+    <Property Name="street" Type="varchar" MaxLength="50" />
+    <Property Name="houseNo" Type="varchar" MaxLength="50" />
+    <Property Name="pobox" Type="varchar" MaxLength="50" />
+    <Property Name="primaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="secondaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="state_region" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="zipCode_postalCode" Type="varchar" MaxLength="50" />
+    <Property Name="additionalInfo" Type="text" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblMenu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="rlkMenuTypeID" Type="int" />
+    <Property Name="caption" Type="varchar" MaxLength="50" />
+    <Property Name="icon" Type="image" />
+    <Property Name="parent" Type="int" />
+    <Property Name="order" Type="int" />
+    <Property Name="visible" Type="bit" />
+    <Property Name="disabled" Type="bit" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblMenuRole">
+    <Key>
+      <PropertyRef Name="menuID" />
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="menuID" Type="int" Nullable="false" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="roleName" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="int" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="fullName" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblUserAddress">
+    <Key>
+      <PropertyRef Name="userID" />
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="userID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="addressID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserControl">
+    <Key>
+      <PropertyRef Name="menuID" />
+    </Key>
+    <Property Name="menuID" Type="int" Nullable="false" />
+    <Property Name="ucName" Type="varchar" MaxLength="50" />
+    <Property Name="default" Type="bit" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblUserRole">
+    <Key>
+      <PropertyRef Name="userID" />
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="userID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tblMenu_lkMenuType">
+    <End Role="lkMenuType" Type="UserRoleeDMSModel.Store.lkMenuType" Multiplicity="0..1" />
+    <End Role="tblMenu" Type="UserRoleeDMSModel.Store.tblMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkMenuType">
+        <PropertyRef Name="lkMenuTypeID" />
+      </Principal>
+      <Dependent Role="tblMenu">
+        <PropertyRef Name="rlkMenuTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMenu_tblUserControl">
+    <End Role="tblUserControl" Type="UserRoleeDMSModel.Store.tblUserControl" Multiplicity="1" />
+    <End Role="tblMenu" Type="UserRoleeDMSModel.Store.tblMenu" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserControl">
+        <PropertyRef Name="menuID" />
+      </Principal>
+      <Dependent Role="tblMenu">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMenuRole_tblMenu">
+    <End Role="tblMenu" Type="UserRoleeDMSModel.Store.tblMenu" Multiplicity="1" />
+    <End Role="tblMenuRole" Type="UserRoleeDMSModel.Store.tblMenuRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMenu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblMenuRole">
+        <PropertyRef Name="menuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMenuRole_tblRole">
+    <End Role="tblRole" Type="UserRoleeDMSModel.Store.tblRole" Multiplicity="1" />
+    <End Role="tblMenuRole" Type="UserRoleeDMSModel.Store.tblMenuRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblMenuRole">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserAddress_tblAddress">
+    <End Role="tblAddress" Type="UserRoleeDMSModel.Store.tblAddress" Multiplicity="1" />
+    <End Role="tblUserAddress" Type="UserRoleeDMSModel.Store.tblUserAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblUserAddress">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserAddress_tblUser">
+    <End Role="tblUser" Type="UserRoleeDMSModel.Store.tblUser" Multiplicity="1" />
+    <End Role="tblUserAddress" Type="UserRoleeDMSModel.Store.tblUserAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="tblUserAddress">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserRole_tblRole">
+    <End Role="tblRole" Type="UserRoleeDMSModel.Store.tblRole" Multiplicity="1" />
+    <End Role="tblUserRole" Type="UserRoleeDMSModel.Store.tblUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblUserRole">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserRole_tblUser">
+    <End Role="tblUser" Type="UserRoleeDMSModel.Store.tblUser" Multiplicity="1" />
+    <End Role="tblUserRole" Type="UserRoleeDMSModel.Store.tblUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="tblUserRole">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

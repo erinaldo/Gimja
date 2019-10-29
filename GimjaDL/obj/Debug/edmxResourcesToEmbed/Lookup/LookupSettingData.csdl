@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LookupeDMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="LookupData" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="LookupeDMSModel.Brand" />
+    <EntitySet Name="Categories" EntityType="LookupeDMSModel.Category" />
+    <EntitySet Name="CreditStatus" EntityType="LookupeDMSModel.CreditStatus" />
+    <EntitySet Name="Manufacturers" EntityType="LookupeDMSModel.Manufacturer" />
+    <EntitySet Name="Suppliers" EntityType="LookupeDMSModel.Supplier" />
+    <EntitySet Name="TaxTypes" EntityType="LookupeDMSModel.TaxType" />
+    <EntitySet Name="Units" EntityType="LookupeDMSModel.Unit" />
+    <EntitySet Name="Addresses" EntityType="LookupeDMSModel.Address" />
+    <EntitySet Name="TelephoneFaxes" EntityType="LookupeDMSModel.TelephoneFax" />
+    <AssociationSet Name="tblManufacturerAddress" Association="LookupeDMSModel.tblManufacturerAddress">
+      <End Role="lkManufacturer" EntitySet="Manufacturers" />
+      <End Role="tblAddress" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="tblManufacturerTelephoneFax" Association="LookupeDMSModel.tblManufacturerTelephoneFax">
+      <End Role="lkManufacturer" EntitySet="Manufacturers" />
+      <End Role="tblTelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="lkBrandID" />
+    </Key>
+    <Property Name="lkBrandID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="lkCategoryID" />
+    </Key>
+    <Property Name="lkCategoryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CreditStatus">
+    <Key>
+      <PropertyRef Name="lkCreditSatusID" />
+    </Key>
+    <Property Name="lkCreditSatusID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="lkManufacturerID" />
+    </Key>
+    <Property Name="lkManufacturerID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="contactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Addresses" Relationship="LookupeDMSModel.tblManufacturerAddress" FromRole="lkManufacturer" ToRole="tblAddress" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="LookupeDMSModel.tblManufacturerTelephoneFax" FromRole="lkManufacturer" ToRole="tblTelephoneFax" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="lkSupplierID" />
+    </Key>
+    <Property Name="lkSupplierID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="contactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TaxType">
+    <Key>
+      <PropertyRef Name="lkTaxTypeID" />
+    </Key>
+    <Property Name="lkTaxTypeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="taxTypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="lkUnitID" />
+    </Key>
+    <Property Name="lkUnitID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="unitName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="kebele" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="woreda" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="subcity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="city_town" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="street" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="houseNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="pobox" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="primaryEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="secondaryEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="state_region" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="country" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="zipCode_postalCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="additionalInfo" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Manufacturers" Relationship="LookupeDMSModel.tblManufacturerAddress" FromRole="tblAddress" ToRole="lkManufacturer" />
+  </EntityType>
+  <EntityType Name="TelephoneFax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="number" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Manufacturers" Relationship="LookupeDMSModel.tblManufacturerTelephoneFax" FromRole="tblTelephoneFax" ToRole="lkManufacturer" />
+  </EntityType>
+  <Association Name="tblManufacturerAddress">
+    <End Role="lkManufacturer" Type="LookupeDMSModel.Manufacturer" Multiplicity="*" />
+    <End Role="tblAddress" Type="LookupeDMSModel.Address" Multiplicity="*" />
+  </Association>
+  <Association Name="tblManufacturerTelephoneFax">
+    <End Role="lkManufacturer" Type="LookupeDMSModel.Manufacturer" Multiplicity="*" />
+    <End Role="tblTelephoneFax" Type="LookupeDMSModel.TelephoneFax" Multiplicity="*" />
+  </Association>
+</Schema>

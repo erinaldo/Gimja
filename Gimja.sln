@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimjaUI", "Gimja\GimjaUI.csproj", "{B067578E-B021-498B-B8E2-A60EE8041BF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimjaBL", "GimjaBL\GimjaBL.csproj", "{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimjaDL", "GimjaDL\GimjaDL.csproj", "{89E19479-50DF-4F90-8D42-EDF1859A3DE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimjaService", "GimjaService\GimjaService.csproj", "{72BC158D-42FD-4AAD-A769-C9459DC9A78A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://fekadu-pc:8080/tfs/main%20project%20collection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Gimja\\GimjaUI.csproj
+		SccProjectName1 = Gimja
+		SccLocalPath1 = Gimja
+		SccProjectUniqueName2 = GimjaBL\\GimjaBL.csproj
+		SccProjectName2 = GimjaBL
+		SccLocalPath2 = GimjaBL
+		SccProjectUniqueName3 = GimjaDL\\GimjaDL.csproj
+		SccProjectName3 = GimjaDL
+		SccLocalPath3 = GimjaDL
+		SccProjectUniqueName4 = GimjaService\\GimjaService.csproj
+		SccProjectName4 = GimjaService
+		SccLocalPath4 = GimjaService
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Debug|x86.ActiveCfg = Debug|x86
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Debug|x86.Build.0 = Debug|x86
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Release|x86.ActiveCfg = Release|x86
+		{B067578E-B021-498B-B8E2-A60EE8041BF2}.Release|x86.Build.0 = Release|x86
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Debug|x86.ActiveCfg = Debug|x86
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Debug|x86.Build.0 = Debug|x86
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Release|x86.ActiveCfg = Release|x86
+		{9E40DF02-296F-4E4D-9252-6F0FFA39DBBE}.Release|x86.Build.0 = Release|x86
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Debug|x86.ActiveCfg = Debug|x86
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Debug|x86.Build.0 = Debug|x86
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Release|x86.ActiveCfg = Release|x86
+		{89E19479-50DF-4F90-8D42-EDF1859A3DE7}.Release|x86.Build.0 = Release|x86
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Debug|x86.ActiveCfg = Debug|x86
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Debug|x86.Build.0 = Debug|x86
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Release|x86.ActiveCfg = Release|x86
+		{72BC158D-42FD-4AAD-A769-C9459DC9A78A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

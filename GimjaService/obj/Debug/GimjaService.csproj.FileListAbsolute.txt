@@ -1,0 +1,5 @@
+D:\Projects\Gimja\GimjaService\bin\GimjaService.dll
+D:\Projects\Gimja\GimjaService\bin\GimjaService.pdb
+D:\Projects\Gimja\GimjaService\obj\Debug\GimjaService.csprojResolveAssemblyReference.cache
+D:\Projects\Gimja\GimjaService\obj\Debug\GimjaService.dll
+D:\Projects\Gimja\GimjaService\obj\Debug\GimjaService.pdb

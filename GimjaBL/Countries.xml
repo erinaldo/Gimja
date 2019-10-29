@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<countries>
+	<country countryCode="AD" countryName="Andorra" capital="Andorra la Vella" />
+	<country countryCode="AE" countryName="United Arab Emirates" capital="Abu Dhabi" />
+	<country countryCode="AF" countryName="Afghanistan" capital="Kabul" />
+	<country countryCode="AG" countryName="Antigua and Barbuda" capital="St. John's" />
+	<country countryCode="AI" countryName="Anguilla" capital="The Valley" />
+	<country countryCode="AL" countryName="Albania" capital="Tirana" />
+	<country countryCode="AM" countryName="Armenia" capital="Yerevan" />
+	<country countryCode="AO" countryName="Angola" capital="Luanda" />
+	<country countryCode="AQ" countryName="Antarctica" capital="" />
+	<country countryCode="AR" countryName="Argentina" capital="Buenos Aires" />
+	<country countryCode="AS" countryName="American Samoa" capital="Pago Pago" />
+	<country countryCode="AT" countryName="Austria" capital="Vienna" />
+	<country countryCode="AU" countryName="Australia" capital="Canberra" />
+	<country countryCode="AW" countryName="Aruba" capital="Oranjestad" />
+	<country countryCode="AX" countryName="Åland" capital="Mariehamn" />
+	<country countryCode="AZ" countryName="Azerbaijan" capital="Baku" />
+	<country countryCode="BA" countryName="Bosnia and Herzegovina" capital="Sarajevo" />
+	<country countryCode="BB" countryName="Barbados" capital="Bridgetown" />
+	<country countryCode="BD" countryName="Bangladesh" capital="Dhaka" />
+	<country countryCode="BE" countryName="Belgium" capital="Brussels" />
+	<country countryCode="BF" countryName="Burkina Faso" capital="Ouagadougou" />
+	<country countryCode="BG" countryName="Bulgaria" capital="Sofia" />
+	<country countryCode="BH" countryName="Bahrain" capital="Manama" />
+	<country countryCode="BI" countryName="Burundi" capital="Bujumbura" />
+	<country countryCode="BJ" countryName="Benin" capital="Porto-Novo" />
+	<country countryCode="BL" countryName="Saint Barthélemy" capital="Gustavia" />
+	<country countryCode="BM" countryName="Bermuda" capital="Hamilton" />
+	<country countryCode="BN" countryName="Brunei" capital="Bandar Seri Begawan" />
+	<country countryCode="BO" countryName="Bolivia" capital="Sucre" />
+	<country countryCode="BQ" countryName="Bonaire" capital="" />
+	<country countryCode="BR" countryName="Brazil" capital="Brasília" />
+	<country countryCode="BS" countryName="Bahamas" capital="Nassau" />
+	<country countryCode="BT" countryName="Bhutan" capital="Thimphu" />
+	<country countryCode="BV" countryName="Bouvet Island" capital="" />
+	<country countryCode="BW" countryName="Botswana" capital="Gaborone" />
+	<country countryCode="BY" countryName="Belarus" capital="Minsk" />
+	<country countryCode="BZ" countryName="Belize" capital="Belmopan" />
+	<country countryCode="CA" countryName="Canada" capital="Ottawa" />
+	<country countryCode="CC" countryName="Cocos [Keeling] Islands" capital="West Island" />
+	<country countryCode="CD" countryName="Democratic Republic of the Congo" capital="Kinshasa" />
+	<country countryCode="CF" countryName="Central African Republic" capital="Bangui" />
+	<country countryCode="CG" countryName="Republic of the Congo" capital="Brazzaville" />
+	<country countryCode="CH" countryName="Switzerland" capital="Berne" />
+	<country countryCode="CI" countryName="Ivory Coast" capital="Yamoussoukro" />
+	<country countryCode="CK" countryName="Cook Islands" capital="Avarua" />
+	<country countryCode="CL" countryName="Chile" capital="Santiago" />
+	<country countryCode="CM" countryName="Cameroon" capital="Yaoundé" />
+	<country countryCode="CN" countryName="China" capital="Beijing" />
+	<country countryCode="CO" countryName="Colombia" capital="Bogotá" />
+	<country countryCode="CR" countryName="Costa Rica" capital="San José" />
+	<country countryCode="CU" countryName="Cuba" capital="Havana" />
+	<country countryCode="CV" countryName="Cape Verde" capital="Praia" />
+	<country countryCode="CW" countryName="Curacao" capital="Willemstad" />
+	<country countryCode="CX" countryName="Christmas Island" capital="The Settlement" />
+	<country countryCode="CY" countryName="Cyprus" capital="Nicosia" />
+	<country countryCode="CZ" countryName="Czechia" capital="Prague" />
+	<country countryCode="DE" countryName="Germany" capital="Berlin" />
+	<country countryCode="DJ" countryName="Djibouti" capital="Djibouti" />
+	<country countryCode="DK" countryName="Denmark" capital="Copenhagen" />
+	<country countryCode="DM" countryName="Dominica" capital="Roseau" />
+	<country countryCode="DO" countryName="Dominican Republic" capital="Santo Domingo" />
+	<country countryCode="DZ" countryName="Algeria" capital="Algiers" />
+	<country countryCode="EC" countryName="Ecuador" capital="Quito" />
+	<country countryCode="EE" countryName="Estonia" capital="Tallinn" />
+	<country countryCode="EG" countryName="Egypt" capital="Cairo" />
+	<country countryCode="EH" countryName="Western Sahara" capital="El Aaiún" />
+	<country countryCode="ER" countryName="Eritrea" capital="Asmara" />
+	<country countryCode="ES" countryName="Spain" capital="Madrid" />
+	<country countryCode="ET" countryName="Ethiopia" capital="Addis Ababa" />
+	<country countryCode="FI" countryName="Finland" capital="Helsinki" />
+	<country countryCode="FJ" countryName="Fiji" capital="Suva" />
+	<country countryCode="FK" countryName="Falkland Islands" capital="Stanley" />
+	<country countryCode="FM" countryName="Micronesia" capital="Palikir" />
+	<country countryCode="FO" countryName="Faroe Islands" capital="Tórshavn" />
+	<country countryCode="FR" countryName="France" capital="Paris" />
+	<country countryCode="GA" countryName="Gabon" capital="Libreville" />
+	<country countryCode="GB" countryName="United Kingdom" capital="London" />
+	<country countryCode="GD" countryName="Grenada" capital="St. George's" />
+	<country countryCode="GE" countryName="Georgia" capital="Tbilisi" />
+	<country countryCode="GF" countryName="French Guiana" capital="Cayenne" />
+	<country countryCode="GG" countryName="Guernsey" capital="St Peter Port" />
+	<country countryCode="GH" countryName="Ghana" capital="Accra" />
+	<country countryCode="GI" countryName="Gibraltar" capital="Gibraltar" />
+	<country countryCode="GL" countryName="Greenland" capital="Nuuk" />
+	<country countryCode="GM" countryName="Gambia" capital="Banjul" />
+	<country countryCode="GN" countryName="Guinea" capital="Conakry" />
+	<country countryCode="GP" countryName="Guadeloupe" capital="Basse-Terre" />
+	<country countryCode="GQ" countryName="Equatorial Guinea" capital="Malabo" />
+	<country countryCode="GR" countryName="Greece" capital="Athens" />
+	<country countryCode="GS" countryName="South Georgia and the South Sandwich Islands" capital="Grytviken" />
+	<country countryCode="GT" countryName="Guatemala" capital="Guatemala City" />
+	<country countryCode="GU" countryName="Guam" capital="Hagåtña" />
+	<country countryCode="GW" countryName="Guinea-Bissau" capital="Bissau" />
+	<country countryCode="GY" countryName="Guyana" capital="Georgetown" />
+	<country countryCode="HK" countryName="Hong Kong" capital="Hong Kong" />
+	<country countryCode="HM" countryName="Heard Island and McDonald Islands" capital="" />
+	<country countryCode="HN" countryName="Honduras" capital="Tegucigalpa" />
+	<country countryCode="HR" countryName="Croatia" capital="Zagreb" />
+	<country countryCode="HT" countryName="Haiti" capital="Port-au-Prince" />
+	<country countryCode="HU" countryName="Hungary" capital="Budapest" />
+	<country countryCode="ID" countryName="Indonesia" capital="Jakarta" />
+	<country countryCode="IE" countryName="Ireland" capital="Dublin" />
+	<country countryCode="IL" countryName="Israel" capital="" />
+	<country countryCode="IM" countryName="Isle of Man" capital="Douglas" />
+	<country countryCode="IN" countryName="India" capital="New Delhi" />
+	<country countryCode="IO" countryName="British Indian Ocean Territory" capital="" />
+	<country countryCode="IQ" countryName="Iraq" capital="Baghdad" />
+	<country countryCode="IR" countryName="Iran" capital="Tehran" />
+	<country countryCode="IS" countryName="Iceland" capital="Reykjavik" />
+	<country countryCode="IT" countryName="Italy" capital="Rome" />
+	<country countryCode="JE" countryName="Jersey" capital="Saint Helier" />
+	<country countryCode="JM" countryName="Jamaica" capital="Kingston" />
+	<country countryCode="JO" countryName="Jordan" capital="Amman" />
+	<country countryCode="JP" countryName="Japan" capital="Tokyo" />
+	<country countryCode="KE" countryName="Kenya" capital="Nairobi" />
+	<country countryCode="KG" countryName="Kyrgyzstan" capital="Bishkek" />
+	<country countryCode="KH" countryName="Cambodia" capital="Phnom Penh" />
+	<country countryCode="KI" countryName="Kiribati" capital="Tarawa" />
+	<country countryCode="KM" countryName="Comoros" capital="Moroni" />
+	<country countryCode="KN" countryName="Saint Kitts and Nevis" capital="Basseterre" />
+	<country countryCode="KP" countryName="North Korea" capital="Pyongyang" />
+	<country countryCode="KR" countryName="South Korea" capital="Seoul" />
+	<country countryCode="KW" countryName="Kuwait" capital="Kuwait City" />
+	<country countryCode="KY" countryName="Cayman Islands" capital="George Town" />
+	<country countryCode="KZ" countryName="Kazakhstan" capital="Astana" />
+	<country countryCode="LA" countryName="Laos" capital="Vientiane" />
+	<country countryCode="LB" countryName="Lebanon" capital="Beirut" />
+	<country countryCode="LC" countryName="Saint Lucia" capital="Castries" />
+	<country countryCode="LI" countryName="Liechtenstein" capital="Vaduz" />
+	<country countryCode="LK" countryName="Sri Lanka" capital="Colombo" />
+	<country countryCode="LR" countryName="Liberia" capital="Monrovia" />
+	<country countryCode="LS" countryName="Lesotho" capital="Maseru" />
+	<country countryCode="LT" countryName="Lithuania" capital="Vilnius" />
+	<country countryCode="LU" countryName="Luxembourg" capital="Luxembourg" />
+	<country countryCode="LV" countryName="Latvia" capital="Riga" />
+	<country countryCode="LY" countryName="Libya" capital="Tripoli" />
+	<country countryCode="MA" countryName="Morocco" capital="Rabat" />
+	<country countryCode="MC" countryName="Monaco" capital="Monaco" />
+	<country countryCode="MD" countryName="Moldova" capital="Chişinău" />
+	<country countryCode="ME" countryName="Montenegro" capital="Podgorica" />
+	<country countryCode="MF" countryName="Saint Martin" capital="Marigot" />
+	<country countryCode="MG" countryName="Madagascar" capital="Antananarivo" />
+	<country countryCode="MH" countryName="Marshall Islands" capital="Majuro" />
+	<country countryCode="MK" countryName="Macedonia" capital="Skopje" />
+	<country countryCode="ML" countryName="Mali" capital="Bamako" />
+	<country countryCode="MM" countryName="Myanmar [Burma]" capital="Nay Pyi Taw" />
+	<country countryCode="MN" countryName="Mongolia" capital="Ulan Bator" />
+	<country countryCode="MO" countryName="Macao" capital="Macao" />
+	<country countryCode="MP" countryName="Northern Mariana Islands" capital="Saipan" />
+	<country countryCode="MQ" countryName="Martinique" capital="Fort-de-France" />
+	<country countryCode="MR" countryName="Mauritania" capital="Nouakchott" />
+	<country countryCode="MS" countryName="Montserrat" capital="Plymouth" />
+	<country countryCode="MT" countryName="Malta" capital="Valletta" />
+	<country countryCode="MU" countryName="Mauritius" capital="Port Louis" />
+	<country countryCode="MV" countryName="Maldives" capital="Malé" />
+	<country countryCode="MW" countryName="Malawi" capital="Lilongwe" />
+	<country countryCode="MX" countryName="Mexico" capital="Mexico City" />
+	<country countryCode="MY" countryName="Malaysia" capital="Kuala Lumpur" />
+	<country countryCode="MZ" countryName="Mozambique" capital="Maputo" />
+	<country countryCode="NA" countryName="Namibia" capital="Windhoek" />
+	<country countryCode="NC" countryName="New Caledonia" capital="Noumea" />
+	<country countryCode="NE" countryName="Niger" capital="Niamey" />
+	<country countryCode="NF" countryName="Norfolk Island" capital="Kingston" />
+	<country countryCode="NG" countryName="Nigeria" capital="Abuja" />
+	<country countryCode="NI" countryName="Nicaragua" capital="Managua" />
+	<country countryCode="NL" countryName="Netherlands" capital="Amsterdam" />
+	<country countryCode="NO" countryName="Norway" capital="Oslo" />
+	<country countryCode="NP" countryName="Nepal" capital="Kathmandu" />
+	<country countryCode="NR" countryName="Nauru" capital="" />
+	<country countryCode="NU" countryName="Niue" capital="Alofi" />
+	<country countryCode="NZ" countryName="New Zealand" capital="Wellington" />
+	<country countryCode="OM" countryName="Oman" capital="Muscat" />
+	<country countryCode="PA" countryName="Panama" capital="Panama City" />
+	<country countryCode="PE" countryName="Peru" capital="Lima" />
+	<country countryCode="PF" countryName="French Polynesia" capital="Papeete" />
+	<country countryCode="PG" countryName="Papua New Guinea" capital="Port Moresby" />
+	<country countryCode="PH" countryName="Philippines" capital="Manila" />
+	<country countryCode="PK" countryName="Pakistan" capital="Islamabad" />
+	<country countryCode="PL" countryName="Poland" capital="Warsaw" />
+	<country countryCode="PM" countryName="Saint Pierre and Miquelon" capital="Saint-Pierre" />
+	<country countryCode="PN" countryName="Pitcairn Islands" capital="Adamstown" />
+	<country countryCode="PR" countryName="Puerto Rico" capital="San Juan" />
+	<country countryCode="PS" countryName="Palestine" capital="" />
+	<country countryCode="PT" countryName="Portugal" capital="Lisbon" />
+	<country countryCode="PW" countryName="Palau" capital="Melekeok - Palau State Capital" />
+	<country countryCode="PY" countryName="Paraguay" capital="Asunción" />
+	<country countryCode="QA" countryName="Qatar" capital="Doha" />
+	<country countryCode="RE" countryName="Réunion" capital="Saint-Denis" />
+	<country countryCode="RO" countryName="Romania" capital="Bucharest" />
+	<country countryCode="RS" countryName="Serbia" capital="Belgrade" />
+	<country countryCode="RU" countryName="Russia" capital="Moscow" />
+	<country countryCode="RW" countryName="Rwanda" capital="Kigali" />
+	<country countryCode="SA" countryName="Saudi Arabia" capital="Riyadh" />
+	<country countryCode="SB" countryName="Solomon Islands" capital="Honiara" />
+	<country countryCode="SC" countryName="Seychelles" capital="Victoria" />
+	<country countryCode="SD" countryName="Sudan" capital="Khartoum" />
+	<country countryCode="SE" countryName="Sweden" capital="Stockholm" />
+	<country countryCode="SG" countryName="Singapore" capital="Singapore" />
+	<country countryCode="SH" countryName="Saint Helena" capital="Jamestown" />
+	<country countryCode="SI" countryName="Slovenia" capital="Ljubljana" />
+	<country countryCode="SJ" countryName="Svalbard and Jan Mayen" capital="Longyearbyen" />
+	<country countryCode="SK" countryName="Slovakia" capital="Bratislava" />
+	<country countryCode="SL" countryName="Sierra Leone" capital="Freetown" />
+	<country countryCode="SM" countryName="San Marino" capital="San Marino" />
+	<country countryCode="SN" countryName="Senegal" capital="Dakar" />
+	<country countryCode="SO" countryName="Somalia" capital="Mogadishu" />
+	<country countryCode="SR" countryName="Suriname" capital="Paramaribo" />
+	<country countryCode="SS" countryName="South Sudan" capital="Juba" />
+	<country countryCode="ST" countryName="São Tomé and Príncipe" capital="São Tomé" />
+	<country countryCode="SV" countryName="El Salvador" capital="San Salvador" />
+	<country countryCode="SX" countryName="Sint Maarten" capital="Philipsburg" />
+	<country countryCode="SY" countryName="Syria" capital="Damascus" />
+	<country countryCode="SZ" countryName="Swaziland" capital="Mbabane" />
+	<country countryCode="TC" countryName="Turks and Caicos Islands" capital="Cockburn Town" />
+	<country countryCode="TD" countryName="Chad" capital="N'Djamena" />
+	<country countryCode="TF" countryName="French Southern Territories" capital="Port-aux-Français" />
+	<country countryCode="TG" countryName="Togo" capital="Lomé" />
+	<country countryCode="TH" countryName="Thailand" capital="Bangkok" />
+	<country countryCode="TJ" countryName="Tajikistan" capital="Dushanbe" />
+	<country countryCode="TK" countryName="Tokelau" capital="" />
+	<country countryCode="TL" countryName="East Timor" capital="Dili" />
+	<country countryCode="TM" countryName="Turkmenistan" capital="Ashgabat" />
+	<country countryCode="TN" countryName="Tunisia" capital="Tunis" />
+	<country countryCode="TO" countryName="Tonga" capital="Nuku'alofa" />
+	<country countryCode="TR" countryName="Turkey" capital="Ankara" />
+	<country countryCode="TT" countryName="Trinidad and Tobago" capital="Port of Spain" />
+	<country countryCode="TV" countryName="Tuvalu" capital="Funafuti" />
+	<country countryCode="TW" countryName="Taiwan" capital="Taipei" />
+	<country countryCode="TZ" countryName="Tanzania" capital="Dodoma" />
+	<country countryCode="UA" countryName="Ukraine" capital="Kyiv" />
+	<country countryCode="UG" countryName="Uganda" capital="Kampala" />
+	<country countryCode="UM" countryName="U.S. Minor Outlying Islands" capital="" />
+	<country countryCode="US" countryName="United States" capital="Washington" />
+	<country countryCode="UY" countryName="Uruguay" capital="Montevideo" />
+	<country countryCode="UZ" countryName="Uzbekistan" capital="Tashkent" />
+	<country countryCode="VA" countryName="Vatican City" capital="Vatican" />
+	<country countryCode="VC" countryName="Saint Vincent and the Grenadines" capital="Kingstown" />
+	<country countryCode="VE" countryName="Venezuela" capital="Caracas" />
+	<country countryCode="VG" countryName="British Virgin Islands" capital="Road Town" />
+	<country countryCode="VI" countryName="U.S. Virgin Islands" capital="Charlotte Amalie" />
+	<country countryCode="VN" countryName="Vietnam" capital="Hanoi" />
+	<country countryCode="VU" countryName="Vanuatu" capital="Port Vila" />
+	<country countryCode="WF" countryName="Wallis and Futuna" capital="Mata-Utu" />
+	<country countryCode="WS" countryName="Samoa" capital="Apia" />
+	<country countryCode="XK" countryName="Kosovo" capital="Pristina" />
+	<country countryCode="YE" countryName="Yemen" capital="Sanaa" />
+	<country countryCode="YT" countryName="Mayotte" capital="Mamoutzou" />
+	<country countryCode="ZA" countryName="South Africa" capital="Pretoria" />
+	<country countryCode="ZM" countryName="Zambia" capital="Lusaka" />
+	<country countryCode="ZW" countryName="Zimbabwe" capital="Harare" />
+</countries>

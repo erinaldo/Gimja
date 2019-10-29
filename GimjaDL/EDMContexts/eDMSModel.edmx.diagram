@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f05daa2b684e416fac27ef9963000a8f" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="eDMSModel.Brand" Width="1.5" PointX="0.75" PointY="14" />
+        <EntityTypeShape EntityType="eDMSModel.Category" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="eDMSModel.CreditStatus" Width="1.5" PointX="6.75" PointY="41.875" />
+        <EntityTypeShape EntityType="eDMSModel.Manufacturer" Width="1.5" PointX="3" PointY="20" />
+        <EntityTypeShape EntityType="eDMSModel.MenuType" Width="1.5" PointX="1.5" PointY="56" />
+        <EntityTypeShape EntityType="eDMSModel.SalesLocation" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="eDMSModel.Supplier" Width="1.5" PointX="0.75" PointY="39.875" />
+        <EntityTypeShape EntityType="eDMSModel.TaxType" Width="1.5" PointX="0.75" PointY="18" />
+        <EntityTypeShape EntityType="eDMSModel.TelephoneFaxType" Width="1.5" PointX="6" PointY="28.625" />
+        <EntityTypeShape EntityType="eDMSModel.Unit" Width="1.5" PointX="0.75" PointY="21.625" />
+        <EntityTypeShape EntityType="eDMSModel.Warehouse" Width="1.5" PointX="6" PointY="23.375" />
+        <EntityTypeShape EntityType="eDMSModel.Address" Width="1.5" PointX="1.5" PointY="25.5" />
+        <EntityTypeShape EntityType="eDMSModel.Branch" Width="1.5" PointX="0.75" PointY="4.125" />
+        <EntityTypeShape EntityType="eDMSModel.CompanyInfo" Width="1.5" PointX="3.75" PointY="45.25" />
+        <EntityTypeShape EntityType="eDMSModel.CreditPayment" Width="1.5" PointX="9" PointY="33.75" />
+        <EntityTypeShape EntityType="eDMSModel.Customer" Width="1.5" PointX="1.5" PointY="32.875" />
+        <EntityTypeShape EntityType="eDMSModel.Issuance" Width="1.5" PointX="3" PointY="4.5" />
+        <EntityTypeShape EntityType="eDMSModel.IssuedItem" Width="1.5" PointX="5.25" PointY="8.75" />
+        <EntityTypeShape EntityType="eDMSModel.Item" Width="1.5" PointX="3" PointY="12.125" />
+        <EntityTypeShape EntityType="eDMSModel.ItemRequest" Width="1.5" PointX="9" PointY="24" />
+        <EntityTypeShape EntityType="eDMSModel.Menu" Width="1.5" PointX="1.5" PointY="50.25" />
+        <EntityTypeShape EntityType="eDMSModel.PurchaseOrder" Width="1.5" PointX="6" PointY="3.875" />
+        <EntityTypeShape EntityType="eDMSModel.PurchaseOrderDetail" Width="1.5" PointX="8.25" PointY="8.5" />
+        <EntityTypeShape EntityType="eDMSModel.Receipt" Width="1.5" PointX="3" PointY="39.5" />
+        <EntityTypeShape EntityType="eDMSModel.ReceivedItem" Width="1.5" PointX="5.25" PointY="18.25" />
+        <EntityTypeShape EntityType="eDMSModel.ReturnedItem" Width="1.5" PointX="8.25" PointY="13.75" />
+        <EntityTypeShape EntityType="eDMSModel.Role" Width="1.5" PointX="1.5" PointY="45.75" />
+        <EntityTypeShape EntityType="eDMSModel.Sale" Width="1.5" PointX="3.75" PointY="32.625" />
+        <EntityTypeShape EntityType="eDMSModel.SalesDetail" Width="1.5" PointX="5.25" PointY="13.5" />
+        <EntityTypeShape EntityType="eDMSModel.SalesReturn" Width="1.5" PointX="6" PointY="33.75" />
+        <EntityTypeShape EntityType="eDMSModel.Stocktaking" Width="1.5" PointX="11.25" PointY="14.125" />
+        <EntityTypeShape EntityType="eDMSModel.SyncTransaction" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="eDMSModel.TelephoneFax" Width="1.5" PointX="8.25" PointY="27.375" />
+        <EntityTypeShape EntityType="eDMSModel.User" Width="1.5" PointX="3.75" PointY="24.625" />
+        <EntityTypeShape EntityType="eDMSModel.UserLocation" Width="1.5" PointX="11.25" PointY="19" />
+        <AssociationConnector Association="eDMSModel.FK_tblItem_lkBrand" />
+        <AssociationConnector Association="eDMSModel.FK_tblItem_lkCategory" />
+        <AssociationConnector Association="eDMSModel.FK_lkManufacturer_tblAddress" />
+        <AssociationConnector Association="eDMSModel.FK_tblReceivedItems_lkManufacturer" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_lkManufacturer" />
+        <AssociationConnector Association="eDMSModel.FK_tblMenu_lkMenuType" />
+        <AssociationConnector Association="eDMSModel.FK_tblSalesDetail_lkSalesLocation" />
+        <AssociationConnector Association="eDMSModel.FK_lkSupplier_tblAddress" />
+        <AssociationConnector Association="eDMSModel.FK_tblReceipt_lkSupplier" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_lkSupplier" />
+        <AssociationConnector Association="eDMSModel.FK_tblItem_lkTaxType" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_lkTelephoneFaxType" />
+        <AssociationConnector Association="eDMSModel.FK_tblItem_lkUnit" />
+        <AssociationConnector Association="eDMSModel.FK_lkWarehouse_tblAddress" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_lkWarehouse" />
+        <AssociationConnector Association="eDMSModel.FK_tblUserLocation_lkWarehouse" />
+        <AssociationConnector Association="eDMSModel.FK_tblBranch_tblAddress" />
+        <AssociationConnector Association="eDMSModel.FK_tblCompanyInfo_tblAddress" />
+        <AssociationConnector Association="eDMSModel.FK_tblCustomer_tblAddress" />
+        <AssociationConnector Association="eDMSModel.FK_tblUser_tblAddress" />
+        <AssociationConnector Association="eDMSModel.FK_tblIssuance_tblBranch" />
+        <AssociationConnector Association="eDMSModel.FK_tblItemRequest_tblBranch" />
+        <AssociationConnector Association="eDMSModel.FK_tblSales_tblBranch" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_tblBranch" />
+        <AssociationConnector Association="eDMSModel.FK_tblUserLocation_tblBranch" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_tblCompanyInfo" />
+        <AssociationConnector Association="eDMSModel.FK_tblCreditPayment_tblSales" />
+        <AssociationConnector Association="eDMSModel.FK_tblSales_tblCustomer" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_tblCustomer" />
+        <AssociationConnector Association="eDMSModel.FK_tblIssuedItems_tblIssuance" />
+        <AssociationConnector Association="eDMSModel.FK_tblIssuedItems_tblItem" />
+        <AssociationConnector Association="eDMSModel.FK_tblPurchaseOrderDetail_tblItem" />
+        <AssociationConnector Association="eDMSModel.FK_tblReceivedItems_tblItem" />
+        <AssociationConnector Association="eDMSModel.FK_tblReturnedItems_tblItem" />
+        <AssociationConnector Association="eDMSModel.FK_tblSalesDetail_tblItem" />
+        <AssociationConnector Association="eDMSModel.FK_tblItemRequest_tblSales" />
+        <AssociationConnector Association="eDMSModel.FK_tblPurchaseOrderDetail_tblPurchaseOrder" />
+        <AssociationConnector Association="eDMSModel.FK_tblReceivedItems_tblReceipt" />
+        <AssociationConnector Association="eDMSModel.FK_tblReturnedItems_tblSalesReturn" />
+        <AssociationConnector Association="eDMSModel.FK_tblSalesDetail_tblSales" />
+        <AssociationConnector Association="eDMSModel.FK_tblSalesReturn_tblSales" />
+        <AssociationConnector Association="eDMSModel.FK_tblTelephoneFax_tblUser" />
+        <AssociationConnector Association="eDMSModel.FK_tblUserLocation_tblUser" />
+        <AssociationConnector Association="eDMSModel.tblMenuRole" />
+        <EntityTypeShape EntityType="eDMSModel.SyncLog" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="eDMSModel.Form" Width="1.5" PointX="3.75" PointY="51.5" />
+        <AssociationConnector Association="eDMSModel.FK_tblForm_tblMenu" />
+        <AssociationConnector Association="eDMSModel.FK_tblCreditPayment_lkCreditStatus1" />
+        <EntityTypeShape EntityType="eDMSModel.CustomerLedger" Width="1.5" PointX="6.75" PointY="37.875" />
+        <EntityTypeShape EntityType="eDMSModel.LossAdjustment" Width="1.5" PointX="8.25" PointY="18.5" />
+        <EntityTypeShape EntityType="eDMSModel.WriteOff" Width="1.5" PointX="3.75" PointY="29.125" />
+        <AssociationConnector Association="eDMSModel.FK_tblCustomerLedger_lkCreditStatus" />
+        <AssociationConnector Association="eDMSModel.FK_tblCustomerLedger_tblCustomer" />
+        <AssociationConnector Association="eDMSModel.FK_tblWriteOff_tblCustomer" />
+        <AssociationConnector Association="eDMSModel.FK_tblLossAdjustment_tblItem" />
+        <AssociationConnector Association="eDMSModel.FK_tblLossAdjustment_lkWarehouse" />
+        <AssociationConnector Association="eDMSModel.FK_tblStocktaking_lkWarehouse" />
+        <AssociationConnector Association="eDMSModel.FK_tblLossAdjustment_tblBranch" />
+        <AssociationConnector Association="eDMSModel.FK_tblStocktaking_tblBranch" />
+        <AssociationConnector Association="eDMSModel.FK_tblUser_tblRole" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

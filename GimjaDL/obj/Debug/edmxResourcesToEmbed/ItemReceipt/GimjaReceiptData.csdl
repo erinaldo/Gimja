@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eDMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="eDMSEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="eDMSModel.Brand" />
+    <EntitySet Name="Categories" EntityType="eDMSModel.Category" />
+    <EntitySet Name="Manufacturers" EntityType="eDMSModel.Manufacturer" />
+    <EntitySet Name="Suppliers" EntityType="eDMSModel.Supplier" />
+    <EntitySet Name="Units" EntityType="eDMSModel.Unit" />
+    <EntitySet Name="Warehouses" EntityType="eDMSModel.Warehouse" />
+    <EntitySet Name="Addresses" EntityType="eDMSModel.Address" />
+    <EntitySet Name="Branches" EntityType="eDMSModel.Branch" />
+    <EntitySet Name="CompanyInfoes" EntityType="eDMSModel.CompanyInfo" />
+    <EntitySet Name="Items" EntityType="eDMSModel.Item" />
+    <EntitySet Name="PurchaseOrders" EntityType="eDMSModel.PurchaseOrder" />
+    <EntitySet Name="PurchaseOrderDetails" EntityType="eDMSModel.PurchaseOrderDetail" />
+    <EntitySet Name="Receipts" EntityType="eDMSModel.Receipt" />
+    <EntitySet Name="ReceivedItems" EntityType="eDMSModel.ReceivedItem" />
+    <EntitySet Name="TelephoneFaxes" EntityType="eDMSModel.TelephoneFax" />
+    <AssociationSet Name="FK_tblItem_lkBrand" Association="eDMSModel.FK_tblItem_lkBrand">
+      <End Role="lkBrand" EntitySet="Brands" />
+      <End Role="tblItem" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkCategory" Association="eDMSModel.FK_tblItem_lkCategory">
+      <End Role="lkCategory" EntitySet="Categories" />
+      <End Role="tblItem" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_lkManufacturer1" Association="eDMSModel.FK_tblReceivedItems_lkManufacturer1">
+      <End Role="lkManufacturer" EntitySet="Manufacturers" />
+      <End Role="tblReceivedItems" EntitySet="ReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceipt_lkSupplier" Association="eDMSModel.FK_tblReceipt_lkSupplier">
+      <End Role="lkSupplier" EntitySet="Suppliers" />
+      <End Role="tblReceipt" EntitySet="Receipts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkUnit" Association="eDMSModel.FK_tblItem_lkUnit">
+      <End Role="lkUnit" EntitySet="Units" />
+      <End Role="tblItem" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceipt_tblWarehouse" Association="eDMSModel.FK_tblReceipt_tblWarehouse">
+      <End Role="lkWarehouse" EntitySet="Warehouses" />
+      <End Role="tblReceipt" EntitySet="Receipts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceipt_tblBranch" Association="eDMSModel.FK_tblReceipt_tblBranch">
+      <End Role="tblBranch" EntitySet="Branches" />
+      <End Role="tblReceipt" EntitySet="Receipts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPurchaseOrderDetail_tblItem1" Association="eDMSModel.FK_tblPurchaseOrderDetail_tblItem1">
+      <End Role="tblItem" EntitySet="Items" />
+      <End Role="tblPurchaseOrderDetail" EntitySet="PurchaseOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_tblItem" Association="eDMSModel.FK_tblReceivedItems_tblItem">
+      <End Role="tblItem" EntitySet="Items" />
+      <End Role="tblReceivedItems" EntitySet="ReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPurchaseOrderDetail_tblPurchaseOrder1" Association="eDMSModel.FK_tblPurchaseOrderDetail_tblPurchaseOrder1">
+      <End Role="tblPurchaseOrder" EntitySet="PurchaseOrders" />
+      <End Role="tblPurchaseOrderDetail" EntitySet="PurchaseOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_tblReceipt1" Association="eDMSModel.FK_tblReceivedItems_tblReceipt1">
+      <End Role="tblReceipt" EntitySet="Receipts" />
+      <End Role="tblReceivedItems" EntitySet="ReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="tblBranchAddress" Association="eDMSModel.tblBranchAddress">
+      <End Role="tblAddress" EntitySet="Addresses" />
+      <End Role="tblBranch" EntitySet="Branches" />
+    </AssociationSet>
+    <AssociationSet Name="tblBranchTelephoneFax" Association="eDMSModel.tblBranchTelephoneFax">
+      <End Role="tblBranch" EntitySet="Branches" />
+      <End Role="tblTelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+    <AssociationSet Name="tblCompanyInfoAddress" Association="eDMSModel.tblCompanyInfoAddress">
+      <End Role="tblAddress" EntitySet="Addresses" />
+      <End Role="tblCompanyInfo" EntitySet="CompanyInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="tblCompanyInfoTelephoneFax" Association="eDMSModel.tblCompanyInfoTelephoneFax">
+      <End Role="tblCompanyInfo" EntitySet="CompanyInfoes" />
+      <End Role="tblTelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+    <AssociationSet Name="tblManufacturerAddress" Association="eDMSModel.tblManufacturerAddress">
+      <End Role="lkManufacturer" EntitySet="Manufacturers" />
+      <End Role="tblAddress" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="tblManufacturerTelephoneFax" Association="eDMSModel.tblManufacturerTelephoneFax">
+      <End Role="lkManufacturer" EntitySet="Manufacturers" />
+      <End Role="tblTelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+    <AssociationSet Name="tblWarehouseAddress" Association="eDMSModel.tblWarehouseAddress">
+      <End Role="lkWarehouse" EntitySet="Warehouses" />
+      <End Role="tblAddress" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="tblWarehouseTelephoneFax" Association="eDMSModel.tblWarehouseTelephoneFax">
+      <End Role="lkWarehouse" EntitySet="Warehouses" />
+      <End Role="tblTelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+    <AssociationSet Name="tblSupplierAddress" Association="eDMSModel.tblSupplierAddress">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="SupplierTelephoneFax" Association="eDMSModel.SupplierTelephoneFax">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="TelephoneFax" EntitySet="TelephoneFaxes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="lkBrandID" />
+    </Key>
+    <Property Name="lkBrandID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Items" Relationship="eDMSModel.FK_tblItem_lkBrand" FromRole="lkBrand" ToRole="tblItem" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="lkCategoryID" />
+    </Key>
+    <Property Name="lkCategoryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Items" Relationship="eDMSModel.FK_tblItem_lkCategory" FromRole="lkCategory" ToRole="tblItem" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="lkManufacturerID" />
+    </Key>
+    <Property Name="lkManufacturerID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="contactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="ReceivedItems" Relationship="eDMSModel.FK_tblReceivedItems_lkManufacturer1" FromRole="lkManufacturer" ToRole="tblReceivedItems" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSModel.tblManufacturerAddress" FromRole="lkManufacturer" ToRole="tblAddress" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSModel.tblManufacturerTelephoneFax" FromRole="lkManufacturer" ToRole="tblTelephoneFax" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="lkSupplierID" />
+    </Key>
+    <Property Name="lkSupplierID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="contactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Receipts" Relationship="eDMSModel.FK_tblReceipt_lkSupplier" FromRole="lkSupplier" ToRole="tblReceipt" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSModel.tblSupplierAddress" FromRole="Supplier" ToRole="Address" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSModel.SupplierTelephoneFax" FromRole="Supplier" ToRole="TelephoneFax" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="lkUnitID" />
+    </Key>
+    <Property Name="lkUnitID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="unitName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Items" Relationship="eDMSModel.FK_tblItem_lkUnit" FromRole="lkUnit" ToRole="tblItem" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="lkWarehouseID" />
+    </Key>
+    <Property Name="lkWarehouseID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Receipts" Relationship="eDMSModel.FK_tblReceipt_tblWarehouse" FromRole="lkWarehouse" ToRole="tblReceipt" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSModel.tblWarehouseAddress" FromRole="lkWarehouse" ToRole="tblAddress" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSModel.tblWarehouseTelephoneFax" FromRole="lkWarehouse" ToRole="tblTelephoneFax" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="kebele" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="woreda" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="subcity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="city_town" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="street" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="houseNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="pobox" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="primaryEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="secondaryEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="state_region" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="country" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="zipCode_postalCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="additionalInfo" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Branches" Relationship="eDMSModel.tblBranchAddress" FromRole="tblAddress" ToRole="tblBranch" />
+    <NavigationProperty Name="CompanyInfos" Relationship="eDMSModel.tblCompanyInfoAddress" FromRole="tblAddress" ToRole="tblCompanyInfo" />
+    <NavigationProperty Name="Manufacturers" Relationship="eDMSModel.tblManufacturerAddress" FromRole="tblAddress" ToRole="lkManufacturer" />
+    <NavigationProperty Name="Warehouses" Relationship="eDMSModel.tblWarehouseAddress" FromRole="tblAddress" ToRole="lkWarehouse" />
+    <NavigationProperty Name="Suppliers" Relationship="eDMSModel.tblSupplierAddress" FromRole="Address" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Receipts" Relationship="eDMSModel.FK_tblReceipt_tblBranch" FromRole="tblBranch" ToRole="tblReceipt" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSModel.tblBranchAddress" FromRole="tblBranch" ToRole="tblAddress" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSModel.tblBranchTelephoneFax" FromRole="tblBranch" ToRole="tblTelephoneFax" />
+  </EntityType>
+  <EntityType Name="CompanyInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TINNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VATRegistrationNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VATRegistrationDate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Addresses" Relationship="eDMSModel.tblCompanyInfoAddress" FromRole="tblCompanyInfo" ToRole="tblAddress" />
+    <NavigationProperty Name="TelephoneFaxes" Relationship="eDMSModel.tblCompanyInfoTelephoneFax" FromRole="tblCompanyInfo" ToRole="tblTelephoneFax" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rlkBrandID" Type="Int32" Nullable="false" />
+    <Property Name="rlkCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="unitPrice" Type="Double" />
+    <Property Name="reorderLevel" Type="Double" />
+    <Property Name="pickFaceQty" Type="Double" />
+    <Property Name="rlkUnitID" Type="Int32" />
+    <Property Name="orderQuantity" Type="Double" />
+    <Property Name="description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="rlkTaxTypeID" Type="Int32" />
+    <Property Name="isTaxExempted" Type="Boolean" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Brand" Relationship="eDMSModel.FK_tblItem_lkBrand" FromRole="tblItem" ToRole="lkBrand" />
+    <NavigationProperty Name="Category" Relationship="eDMSModel.FK_tblItem_lkCategory" FromRole="tblItem" ToRole="lkCategory" />
+    <NavigationProperty Name="Unit" Relationship="eDMSModel.FK_tblItem_lkUnit" FromRole="tblItem" ToRole="lkUnit" />
+    <NavigationProperty Name="PurchaseOrderDetails" Relationship="eDMSModel.FK_tblPurchaseOrderDetail_tblItem1" FromRole="tblItem" ToRole="tblPurchaseOrderDetail" />
+    <NavigationProperty Name="ReceivedItems" Relationship="eDMSModel.FK_tblReceivedItems_tblItem" FromRole="tblItem" ToRole="tblReceivedItems" />
+  </EntityType>
+  <EntityType Name="PurchaseOrder">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="processedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="approvedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="supplierID" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="PurchaseOrderDetails" Relationship="eDMSModel.FK_tblPurchaseOrderDetail_tblPurchaseOrder1" FromRole="tblPurchaseOrder" ToRole="tblPurchaseOrderDetail" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderDetail">
+    <Key>
+      <PropertyRef Name="itemID" />
+      <PropertyRef Name="purchaseOrderID" />
+    </Key>
+    <Property Name="itemID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="purchaseOrderID" Type="Int32" Nullable="false" />
+    <Property Name="origin" Type="Int32" />
+    <Property Name="quantity" Type="Double" />
+    <Property Name="unitPrice" Type="Double" />
+    <Property Name="lkManufacturerID" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Item" Relationship="eDMSModel.FK_tblPurchaseOrderDetail_tblItem1" FromRole="tblPurchaseOrderDetail" ToRole="tblItem" />
+    <NavigationProperty Name="PurchaseOrder" Relationship="eDMSModel.FK_tblPurchaseOrderDetail_tblPurchaseOrder1" FromRole="tblPurchaseOrderDetail" ToRole="tblPurchaseOrder" />
+  </EntityType>
+  <EntityType Name="Receipt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="rlkSupplierID" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="receivedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="approvedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="approvedDate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="storeID" Type="Int32" />
+    <Property Name="isStoreWarehouse" Type="Boolean" />
+    <Property Name="isApproved" Type="Boolean" />
+    <Property Name="reason" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Supplier" Relationship="eDMSModel.FK_tblReceipt_lkSupplier" FromRole="tblReceipt" ToRole="lkSupplier" />
+    <NavigationProperty Name="Warehouse" Relationship="eDMSModel.FK_tblReceipt_tblWarehouse" FromRole="tblReceipt" ToRole="lkWarehouse" />
+    <NavigationProperty Name="Branch" Relationship="eDMSModel.FK_tblReceipt_tblBranch" FromRole="tblReceipt" ToRole="tblBranch" />
+    <NavigationProperty Name="ReceivedItems" Relationship="eDMSModel.FK_tblReceivedItems_tblReceipt1" FromRole="tblReceipt" ToRole="tblReceivedItems" />
+  </EntityType>
+  <EntityType Name="ReceivedItem">
+    <Key>
+      <PropertyRef Name="receiptID" />
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="receiptID" Type="Int32" Nullable="false" />
+    <Property Name="itemID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rlkManufacturerID" Type="Int32" />
+    <Property Name="noPack" Type="Int32" />
+    <Property Name="qtyPerPack" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="price" Type="Double" />
+    <Property Name="unitSellingPrice" Type="Double" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Manufacturer" Relationship="eDMSModel.FK_tblReceivedItems_lkManufacturer1" FromRole="tblReceivedItems" ToRole="lkManufacturer" />
+    <NavigationProperty Name="Item" Relationship="eDMSModel.FK_tblReceivedItems_tblItem" FromRole="tblReceivedItems" ToRole="tblItem" />
+    <NavigationProperty Name="Receipt" Relationship="eDMSModel.FK_tblReceivedItems_tblReceipt1" FromRole="tblReceivedItems" ToRole="tblReceipt" />
+  </EntityType>
+  <EntityType Name="TelephoneFax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="number" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Branches" Relationship="eDMSModel.tblBranchTelephoneFax" FromRole="tblTelephoneFax" ToRole="tblBranch" />
+    <NavigationProperty Name="CompanyInfos" Relationship="eDMSModel.tblCompanyInfoTelephoneFax" FromRole="tblTelephoneFax" ToRole="tblCompanyInfo" />
+    <NavigationProperty Name="Manufacturers" Relationship="eDMSModel.tblManufacturerTelephoneFax" FromRole="tblTelephoneFax" ToRole="lkManufacturer" />
+    <NavigationProperty Name="Warehouses" Relationship="eDMSModel.tblWarehouseTelephoneFax" FromRole="tblTelephoneFax" ToRole="lkWarehouse" />
+    <NavigationProperty Name="Suppliers" Relationship="eDMSModel.SupplierTelephoneFax" FromRole="TelephoneFax" ToRole="Supplier" />
+  </EntityType>
+  <Association Name="FK_tblItem_lkBrand">
+    <End Role="lkBrand" Type="eDMSModel.Brand" Multiplicity="1" />
+    <End Role="tblItem" Type="eDMSModel.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkBrand">
+        <PropertyRef Name="lkBrandID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkBrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkCategory">
+    <End Role="lkCategory" Type="eDMSModel.Category" Multiplicity="1" />
+    <End Role="tblItem" Type="eDMSModel.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkCategory">
+        <PropertyRef Name="lkCategoryID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_lkManufacturer1">
+    <End Role="lkManufacturer" Type="eDMSModel.Manufacturer" Multiplicity="0..1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.ReceivedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="rlkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceipt_lkSupplier">
+    <End Role="lkSupplier" Type="eDMSModel.Supplier" Multiplicity="0..1" />
+    <End Role="tblReceipt" Type="eDMSModel.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkSupplier">
+        <PropertyRef Name="lkSupplierID" />
+      </Principal>
+      <Dependent Role="tblReceipt">
+        <PropertyRef Name="rlkSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkUnit">
+    <End Role="lkUnit" Type="eDMSModel.Unit" Multiplicity="0..1" />
+    <End Role="tblItem" Type="eDMSModel.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkUnit">
+        <PropertyRef Name="lkUnitID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceipt_tblWarehouse">
+    <End Role="lkWarehouse" Type="eDMSModel.Warehouse" Multiplicity="0..1" />
+    <End Role="tblReceipt" Type="eDMSModel.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkWarehouse">
+        <PropertyRef Name="lkWarehouseID" />
+      </Principal>
+      <Dependent Role="tblReceipt">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceipt_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Branch" Multiplicity="0..1" />
+    <End Role="tblReceipt" Type="eDMSModel.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblReceipt">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPurchaseOrderDetail_tblItem1">
+    <End Role="tblItem" Type="eDMSModel.Item" Multiplicity="1" />
+    <End Role="tblPurchaseOrderDetail" Type="eDMSModel.PurchaseOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblPurchaseOrderDetail">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_tblItem">
+    <End Role="tblItem" Type="eDMSModel.Item" Multiplicity="1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.ReceivedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPurchaseOrderDetail_tblPurchaseOrder1">
+    <End Role="tblPurchaseOrder" Type="eDMSModel.PurchaseOrder" Multiplicity="1" />
+    <End Role="tblPurchaseOrderDetail" Type="eDMSModel.PurchaseOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPurchaseOrder">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblPurchaseOrderDetail">
+        <PropertyRef Name="purchaseOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_tblReceipt1">
+    <End Role="tblReceipt" Type="eDMSModel.Receipt" Multiplicity="1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.ReceivedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblReceipt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="receiptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblBranchAddress">
+    <End Role="tblAddress" Type="eDMSModel.Address" Multiplicity="*" />
+    <End Role="tblBranch" Type="eDMSModel.Branch" Multiplicity="*" />
+  </Association>
+  <Association Name="tblBranchTelephoneFax">
+    <End Role="tblBranch" Type="eDMSModel.Branch" Multiplicity="*" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.TelephoneFax" Multiplicity="*" />
+  </Association>
+  <Association Name="tblCompanyInfoAddress">
+    <End Role="tblAddress" Type="eDMSModel.Address" Multiplicity="*" />
+    <End Role="tblCompanyInfo" Type="eDMSModel.CompanyInfo" Multiplicity="*" />
+  </Association>
+  <Association Name="tblCompanyInfoTelephoneFax">
+    <End Role="tblCompanyInfo" Type="eDMSModel.CompanyInfo" Multiplicity="*" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.TelephoneFax" Multiplicity="*" />
+  </Association>
+  <Association Name="tblManufacturerAddress">
+    <End Role="lkManufacturer" Type="eDMSModel.Manufacturer" Multiplicity="*" />
+    <End Role="tblAddress" Type="eDMSModel.Address" Multiplicity="*" />
+  </Association>
+  <Association Name="tblManufacturerTelephoneFax">
+    <End Role="lkManufacturer" Type="eDMSModel.Manufacturer" Multiplicity="*" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.TelephoneFax" Multiplicity="*" />
+  </Association>
+  <Association Name="tblWarehouseAddress">
+    <End Role="lkWarehouse" Type="eDMSModel.Warehouse" Multiplicity="*" />
+    <End Role="tblAddress" Type="eDMSModel.Address" Multiplicity="*" />
+  </Association>
+  <Association Name="tblWarehouseTelephoneFax">
+    <End Role="lkWarehouse" Type="eDMSModel.Warehouse" Multiplicity="*" />
+    <End Role="tblTelephoneFax" Type="eDMSModel.TelephoneFax" Multiplicity="*" />
+  </Association>
+  <Association Name="tblSupplierAddress">
+    <End Type="eDMSModel.Supplier" Role="Supplier" Multiplicity="*" />
+    <End Type="eDMSModel.Address" Role="Address" Multiplicity="*" />
+  </Association>
+  <Association Name="SupplierTelephoneFax">
+    <End Type="eDMSModel.Supplier" Role="Supplier" Multiplicity="*" />
+    <End Type="eDMSModel.TelephoneFax" Role="TelephoneFax" Multiplicity="*" />
+  </Association>
+</Schema>

@@ -1,0 +1,9 @@
+D:\Projects\Gimja\GimjaDL\bin\Release\GimjaDL.dll.config
+D:\Projects\Gimja\GimjaDL\bin\Release\GimjaDL.dll
+D:\Projects\Gimja\GimjaDL\bin\Release\GimjaDL.pdb
+D:\Projects\Gimja\GimjaDL\bin\Release\EntityFramework.dll
+D:\Projects\Gimja\GimjaDL\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\Gimja\GimjaDL\bin\Release\EntityFramework.xml
+D:\Projects\Gimja\GimjaDL\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\Gimja\GimjaDL\obj\Release\GimjaDL.dll
+D:\Projects\Gimja\GimjaDL\obj\Release\GimjaDL.pdb

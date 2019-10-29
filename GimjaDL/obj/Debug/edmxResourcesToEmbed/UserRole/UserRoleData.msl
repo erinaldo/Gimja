@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UserRoleeDMSModelStoreContainer" CdmEntityContainer="UserRoleData">
+    <EntitySetMapping Name="MenuTypes">
+      <EntityTypeMapping TypeName="UserRoleeDMSModel.MenuType">
+        <MappingFragment StoreEntitySet="lkMenuType">
+          <ScalarProperty Name="lkMenuTypeID" ColumnName="lkMenuTypeID" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="UserRoleeDMSModel.Menu">
+        <MappingFragment StoreEntitySet="tblMenu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rlkMenuTypeID" ColumnName="rlkMenuTypeID" />
+          <ScalarProperty Name="caption" ColumnName="caption" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="visible" ColumnName="visible" />
+          <ScalarProperty Name="disabled" ColumnName="disabled" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="UserRoleeDMSModel.Role">
+        <MappingFragment StoreEntitySet="tblRole">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="UserRoleeDMSModel.User">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserControls">
+      <EntityTypeMapping TypeName="UserRoleeDMSModel.UserControl">
+        <MappingFragment StoreEntitySet="tblUserControl">
+          <ScalarProperty Name="menuID" ColumnName="menuID" />
+          <ScalarProperty Name="ucName" ColumnName="ucName" />
+          <ScalarProperty Name="default" ColumnName="default" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblMenuRole" TypeName="UserRoleeDMSModel.tblMenuRole" StoreEntitySet="tblMenuRole">
+      <EndProperty Name="tblMenu">
+        <ScalarProperty Name="id" ColumnName="menuID" />
+      </EndProperty>
+      <EndProperty Name="tblRole">
+        <ScalarProperty Name="id" ColumnName="roleID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblUserRole" TypeName="UserRoleeDMSModel.tblUserRole" StoreEntitySet="tblUserRole">
+      <EndProperty Name="tblRole">
+        <ScalarProperty Name="id" ColumnName="roleID" />
+      </EndProperty>
+      <EndProperty Name="tblUser">
+        <ScalarProperty Name="userID" ColumnName="userID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="UserRoleeDMSModel.Address">
+        <MappingFragment StoreEntitySet="tblAddress">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="lastUpdatedBy" ColumnName="lastUpdatedBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="additionalInfo" ColumnName="additionalInfo" />
+          <ScalarProperty Name="zipCode_postalCode" ColumnName="zipCode_postalCode" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state_region" ColumnName="state_region" />
+          <ScalarProperty Name="secondaryEmail" ColumnName="secondaryEmail" />
+          <ScalarProperty Name="primaryEmail" ColumnName="primaryEmail" />
+          <ScalarProperty Name="pobox" ColumnName="pobox" />
+          <ScalarProperty Name="houseNo" ColumnName="houseNo" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="city_town" ColumnName="city_town" />
+          <ScalarProperty Name="subcity" ColumnName="subcity" />
+          <ScalarProperty Name="woreda" ColumnName="woreda" />
+          <ScalarProperty Name="kebele" ColumnName="kebele" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblUserAddress" TypeName="UserRoleeDMSModel.tblUserAddress" StoreEntitySet="tblUserAddress">
+      <EndProperty Name="User">
+        <ScalarProperty Name="userID" ColumnName="userID" />
+      </EndProperty>
+      <EndProperty Name="tblAddress">
+        <ScalarProperty Name="id" ColumnName="addressID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

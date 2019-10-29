@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eDMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="eDMSModelStoreContainer">
+    <EntitySet Name="lkBrand" EntityType="eDMSModel.Store.lkBrand" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkCategory" EntityType="eDMSModel.Store.lkCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkManufacturer" EntityType="eDMSModel.Store.lkManufacturer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkSupplier" EntityType="eDMSModel.Store.lkSupplier" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkUnit" EntityType="eDMSModel.Store.lkUnit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lkWarehouse" EntityType="eDMSModel.Store.lkWarehouse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAddress" EntityType="eDMSModel.Store.tblAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblBranch" EntityType="eDMSModel.Store.tblBranch" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblBranchAddress" EntityType="eDMSModel.Store.tblBranchAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblBranchTelephoneFax" EntityType="eDMSModel.Store.tblBranchTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCompanyInfo" EntityType="eDMSModel.Store.tblCompanyInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCompanyInfoAddress" EntityType="eDMSModel.Store.tblCompanyInfoAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCompanyInfoTelephoneFax" EntityType="eDMSModel.Store.tblCompanyInfoTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblItem" EntityType="eDMSModel.Store.tblItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblManufacturerAddress" EntityType="eDMSModel.Store.tblManufacturerAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblManufacturerTelephoneFax" EntityType="eDMSModel.Store.tblManufacturerTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblPurchaseOrder" EntityType="eDMSModel.Store.tblPurchaseOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblPurchaseOrderDetail" EntityType="eDMSModel.Store.tblPurchaseOrderDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblReceipt" EntityType="eDMSModel.Store.tblReceipt" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblReceivedItems" EntityType="eDMSModel.Store.tblReceivedItems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSupplierAddress" EntityType="eDMSModel.Store.tblSupplierAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSupplierTelephoneFax" EntityType="eDMSModel.Store.tblSupplierTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTelephoneFax" EntityType="eDMSModel.Store.tblTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblWarehouseAddress" EntityType="eDMSModel.Store.tblWarehouseAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblWarehouseTelephoneFax" EntityType="eDMSModel.Store.tblWarehouseTelephoneFax" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tblBranchAddress_tblAddress" Association="eDMSModel.Store.FK_tblBranchAddress_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblBranchAddress" EntitySet="tblBranchAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBranchAddress_tblBranch" Association="eDMSModel.Store.FK_tblBranchAddress_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblBranchAddress" EntitySet="tblBranchAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBranchTelephoneFax_tblBranch" Association="eDMSModel.Store.FK_tblBranchTelephoneFax_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblBranchTelephoneFax" EntitySet="tblBranchTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBranchTelephoneFax_tblTelephoneFax" Association="eDMSModel.Store.FK_tblBranchTelephoneFax_tblTelephoneFax">
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+      <End Role="tblBranchTelephoneFax" EntitySet="tblBranchTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCompanyInfoAddress_tblAddress" Association="eDMSModel.Store.FK_tblCompanyInfoAddress_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblCompanyInfoAddress" EntitySet="tblCompanyInfoAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCompanyInfoAddress_tblCompanyInfo" Association="eDMSModel.Store.FK_tblCompanyInfoAddress_tblCompanyInfo">
+      <End Role="tblCompanyInfo" EntitySet="tblCompanyInfo" />
+      <End Role="tblCompanyInfoAddress" EntitySet="tblCompanyInfoAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCompanyInfoTelephoneFax_tblCompanyInfo" Association="eDMSModel.Store.FK_tblCompanyInfoTelephoneFax_tblCompanyInfo">
+      <End Role="tblCompanyInfo" EntitySet="tblCompanyInfo" />
+      <End Role="tblCompanyInfoTelephoneFax" EntitySet="tblCompanyInfoTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCompanyInfoTelephoneFax_tblTelephoneFax" Association="eDMSModel.Store.FK_tblCompanyInfoTelephoneFax_tblTelephoneFax">
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+      <End Role="tblCompanyInfoTelephoneFax" EntitySet="tblCompanyInfoTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkBrand" Association="eDMSModel.Store.FK_tblItem_lkBrand">
+      <End Role="lkBrand" EntitySet="lkBrand" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkCategory" Association="eDMSModel.Store.FK_tblItem_lkCategory">
+      <End Role="lkCategory" EntitySet="lkCategory" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_lkUnit" Association="eDMSModel.Store.FK_tblItem_lkUnit">
+      <End Role="lkUnit" EntitySet="lkUnit" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblManufacturerAddress_lkManufacturer" Association="eDMSModel.Store.FK_tblManufacturerAddress_lkManufacturer">
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+      <End Role="tblManufacturerAddress" EntitySet="tblManufacturerAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblManufacturerAddress_tblAddress" Association="eDMSModel.Store.FK_tblManufacturerAddress_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblManufacturerAddress" EntitySet="tblManufacturerAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblManufacturerTelephoneFax_lkManufacturer" Association="eDMSModel.Store.FK_tblManufacturerTelephoneFax_lkManufacturer">
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+      <End Role="tblManufacturerTelephoneFax" EntitySet="tblManufacturerTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblManufacturerTelephoneFax_tblTelephoneFax" Association="eDMSModel.Store.FK_tblManufacturerTelephoneFax_tblTelephoneFax">
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+      <End Role="tblManufacturerTelephoneFax" EntitySet="tblManufacturerTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPurchaseOrderDetail_tblItem1" Association="eDMSModel.Store.FK_tblPurchaseOrderDetail_tblItem1">
+      <End Role="tblItem" EntitySet="tblItem" />
+      <End Role="tblPurchaseOrderDetail" EntitySet="tblPurchaseOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPurchaseOrderDetail_tblPurchaseOrder1" Association="eDMSModel.Store.FK_tblPurchaseOrderDetail_tblPurchaseOrder1">
+      <End Role="tblPurchaseOrder" EntitySet="tblPurchaseOrder" />
+      <End Role="tblPurchaseOrderDetail" EntitySet="tblPurchaseOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceipt_lkSupplier" Association="eDMSModel.Store.FK_tblReceipt_lkSupplier">
+      <End Role="lkSupplier" EntitySet="lkSupplier" />
+      <End Role="tblReceipt" EntitySet="tblReceipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceipt_tblBranch" Association="eDMSModel.Store.FK_tblReceipt_tblBranch">
+      <End Role="tblBranch" EntitySet="tblBranch" />
+      <End Role="tblReceipt" EntitySet="tblReceipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceipt_tblWarehouse" Association="eDMSModel.Store.FK_tblReceipt_tblWarehouse">
+      <End Role="lkWarehouse" EntitySet="lkWarehouse" />
+      <End Role="tblReceipt" EntitySet="tblReceipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_lkManufacturer1" Association="eDMSModel.Store.FK_tblReceivedItems_lkManufacturer1">
+      <End Role="lkManufacturer" EntitySet="lkManufacturer" />
+      <End Role="tblReceivedItems" EntitySet="tblReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_tblItem" Association="eDMSModel.Store.FK_tblReceivedItems_tblItem">
+      <End Role="tblItem" EntitySet="tblItem" />
+      <End Role="tblReceivedItems" EntitySet="tblReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblReceivedItems_tblReceipt1" Association="eDMSModel.Store.FK_tblReceivedItems_tblReceipt1">
+      <End Role="tblReceipt" EntitySet="tblReceipt" />
+      <End Role="tblReceivedItems" EntitySet="tblReceivedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierAddress_lkSupplier" Association="eDMSModel.Store.FK_tblSupplierAddress_lkSupplier">
+      <End Role="lkSupplier" EntitySet="lkSupplier" />
+      <End Role="tblSupplierAddress" EntitySet="tblSupplierAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierAddress_tblAddress" Association="eDMSModel.Store.FK_tblSupplierAddress_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblSupplierAddress" EntitySet="tblSupplierAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierTelephoneFax_tblTelephoneFax" Association="eDMSModel.Store.FK_tblSupplierTelephoneFax_tblTelephoneFax">
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+      <End Role="tblSupplierTelephoneFax" EntitySet="tblSupplierTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblWarehouseAddress_lkWarehouse" Association="eDMSModel.Store.FK_tblWarehouseAddress_lkWarehouse">
+      <End Role="lkWarehouse" EntitySet="lkWarehouse" />
+      <End Role="tblWarehouseAddress" EntitySet="tblWarehouseAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblWarehouseAddress_tblAddress" Association="eDMSModel.Store.FK_tblWarehouseAddress_tblAddress">
+      <End Role="tblAddress" EntitySet="tblAddress" />
+      <End Role="tblWarehouseAddress" EntitySet="tblWarehouseAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblWarehouseTelephoneFax_lkWarehouse" Association="eDMSModel.Store.FK_tblWarehouseTelephoneFax_lkWarehouse">
+      <End Role="lkWarehouse" EntitySet="lkWarehouse" />
+      <End Role="tblWarehouseTelephoneFax" EntitySet="tblWarehouseTelephoneFax" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblWarehouseTelephoneFax_tblTelephoneFax" Association="eDMSModel.Store.FK_tblWarehouseTelephoneFax_tblTelephoneFax">
+      <End Role="tblTelephoneFax" EntitySet="tblTelephoneFax" />
+      <End Role="tblWarehouseTelephoneFax" EntitySet="tblWarehouseTelephoneFax" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="lkBrand">
+    <Key>
+      <PropertyRef Name="lkBrandID" />
+    </Key>
+    <Property Name="lkBrandID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkCategory">
+    <Key>
+      <PropertyRef Name="lkCategoryID" />
+    </Key>
+    <Property Name="lkCategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkManufacturer">
+    <Key>
+      <PropertyRef Name="lkManufacturerID" />
+    </Key>
+    <Property Name="lkManufacturerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="contactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkSupplier">
+    <Key>
+      <PropertyRef Name="lkSupplierID" />
+    </Key>
+    <Property Name="lkSupplierID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyName" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="contactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkUnit">
+    <Key>
+      <PropertyRef Name="lkUnitID" />
+    </Key>
+    <Property Name="lkUnitID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="unitName" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="nchar" MaxLength="10" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="lkWarehouse">
+    <Key>
+      <PropertyRef Name="lkWarehouseID" />
+    </Key>
+    <Property Name="lkWarehouseID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblAddress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kebele" Type="varchar" MaxLength="50" />
+    <Property Name="woreda" Type="varchar" MaxLength="50" />
+    <Property Name="subcity" Type="varchar" MaxLength="50" />
+    <Property Name="city_town" Type="varchar" MaxLength="50" />
+    <Property Name="street" Type="varchar" MaxLength="50" />
+    <Property Name="houseNo" Type="varchar" MaxLength="50" />
+    <Property Name="pobox" Type="varchar" MaxLength="50" />
+    <Property Name="primaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="secondaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="state_region" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="zipCode_postalCode" Type="varchar" MaxLength="50" />
+    <Property Name="additionalInfo" Type="text" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblBranch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblBranchAddress">
+    <Key>
+      <PropertyRef Name="branchID" />
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="branchID" Type="int" Nullable="false" />
+    <Property Name="addressID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblBranchTelephoneFax">
+    <Key>
+      <PropertyRef Name="branchID" />
+      <PropertyRef Name="telephoneFaxID" />
+    </Key>
+    <Property Name="branchID" Type="int" Nullable="false" />
+    <Property Name="telephoneFaxID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCompanyInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="TINNumber" Type="varchar" MaxLength="50" />
+    <Property Name="VATRegistrationNo" Type="varchar" MaxLength="50" />
+    <Property Name="VATRegistrationDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblCompanyInfoAddress">
+    <Key>
+      <PropertyRef Name="companyInfoID" />
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="companyInfoID" Type="int" Nullable="false" />
+    <Property Name="addressID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCompanyInfoTelephoneFax">
+    <Key>
+      <PropertyRef Name="companyInfoID" />
+      <PropertyRef Name="telephoneFaxID" />
+    </Key>
+    <Property Name="companyInfoID" Type="int" Nullable="false" />
+    <Property Name="telephoneFaxID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblItem">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="rlkBrandID" Type="int" Nullable="false" />
+    <Property Name="rlkCategoryID" Type="int" Nullable="false" />
+    <Property Name="unitPrice" Type="float" />
+    <Property Name="reorderLevel" Type="float" />
+    <Property Name="pickFaceQty" Type="float" />
+    <Property Name="rlkUnitID" Type="int" />
+    <Property Name="orderQuantity" Type="float" />
+    <Property Name="description" Type="text" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="rlkTaxTypeID" Type="int" />
+    <Property Name="isTaxExempted" Type="bit" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblManufacturerAddress">
+    <Key>
+      <PropertyRef Name="rlkManufacturerID" />
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="rlkManufacturerID" Type="int" Nullable="false" />
+    <Property Name="addressID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblManufacturerTelephoneFax">
+    <Key>
+      <PropertyRef Name="rlkManufacturerID" />
+      <PropertyRef Name="telephoneFaxID" />
+    </Key>
+    <Property Name="rlkManufacturerID" Type="int" Nullable="false" />
+    <Property Name="telephoneFaxID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPurchaseOrder">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="processedBy" Type="varchar" MaxLength="50" />
+    <Property Name="approvedBy" Type="varchar" MaxLength="50" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="supplierID" Type="int" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblPurchaseOrderDetail">
+    <Key>
+      <PropertyRef Name="itemID" />
+      <PropertyRef Name="purchaseOrderID" />
+    </Key>
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="purchaseOrderID" Type="int" Nullable="false" />
+    <Property Name="origin" Type="int" />
+    <Property Name="quantity" Type="float" />
+    <Property Name="unitPrice" Type="float" />
+    <Property Name="lkManufacturerID" Type="int" />
+    <Property Name="remark" Type="text" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblReceipt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="rlkSupplierID" Type="int" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="receivedBy" Type="varchar" MaxLength="50" />
+    <Property Name="approvedBy" Type="varchar" MaxLength="50" />
+    <Property Name="approvedDate" Type="varchar" MaxLength="50" />
+    <Property Name="storeID" Type="int" />
+    <Property Name="isStoreWarehouse" Type="bit" />
+    <Property Name="isApproved" Type="bit" />
+    <Property Name="reason" Type="text" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblReceivedItems">
+    <Key>
+      <PropertyRef Name="receiptID" />
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="receiptID" Type="int" Nullable="false" />
+    <Property Name="itemID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="rlkManufacturerID" Type="int" />
+    <Property Name="noPack" Type="int" />
+    <Property Name="qtyPerPack" Type="int" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="price" Type="float" />
+    <Property Name="unitSellingPrice" Type="float" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSupplierAddress">
+    <Key>
+      <PropertyRef Name="rlkSupplierID" />
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="rlkSupplierID" Type="int" Nullable="false" />
+    <Property Name="addressID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSupplierTelephoneFax">
+    <Key>
+      <PropertyRef Name="supplierID" />
+      <PropertyRef Name="telephoneFaxID" />
+    </Key>
+    <Property Name="supplierID" Type="int" Nullable="false" />
+    <Property Name="telephoneFaxID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTelephoneFax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="number" Type="varchar" MaxLength="50" />
+    <Property Name="createdBy" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="lastUpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="lastUpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblWarehouseAddress">
+    <Key>
+      <PropertyRef Name="rlkWarehouseID" />
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="rlkWarehouseID" Type="int" Nullable="false" />
+    <Property Name="addressID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblWarehouseTelephoneFax">
+    <Key>
+      <PropertyRef Name="rlkWarehouseID" />
+      <PropertyRef Name="telephoneFaxID" />
+    </Key>
+    <Property Name="rlkWarehouseID" Type="int" Nullable="false" />
+    <Property Name="telephoneFaxID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tblBranchAddress_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="1" />
+    <End Role="tblBranchAddress" Type="eDMSModel.Store.tblBranchAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblBranchAddress">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBranchAddress_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="1" />
+    <End Role="tblBranchAddress" Type="eDMSModel.Store.tblBranchAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblBranchAddress">
+        <PropertyRef Name="branchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBranchTelephoneFax_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="1" />
+    <End Role="tblBranchTelephoneFax" Type="eDMSModel.Store.tblBranchTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblBranchTelephoneFax">
+        <PropertyRef Name="branchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBranchTelephoneFax_tblTelephoneFax">
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="1" />
+    <End Role="tblBranchTelephoneFax" Type="eDMSModel.Store.tblBranchTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTelephoneFax">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblBranchTelephoneFax">
+        <PropertyRef Name="telephoneFaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCompanyInfoAddress_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="1" />
+    <End Role="tblCompanyInfoAddress" Type="eDMSModel.Store.tblCompanyInfoAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCompanyInfoAddress">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCompanyInfoAddress_tblCompanyInfo">
+    <End Role="tblCompanyInfo" Type="eDMSModel.Store.tblCompanyInfo" Multiplicity="1" />
+    <End Role="tblCompanyInfoAddress" Type="eDMSModel.Store.tblCompanyInfoAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompanyInfo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCompanyInfoAddress">
+        <PropertyRef Name="companyInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCompanyInfoTelephoneFax_tblCompanyInfo">
+    <End Role="tblCompanyInfo" Type="eDMSModel.Store.tblCompanyInfo" Multiplicity="1" />
+    <End Role="tblCompanyInfoTelephoneFax" Type="eDMSModel.Store.tblCompanyInfoTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompanyInfo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCompanyInfoTelephoneFax">
+        <PropertyRef Name="companyInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCompanyInfoTelephoneFax_tblTelephoneFax">
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="1" />
+    <End Role="tblCompanyInfoTelephoneFax" Type="eDMSModel.Store.tblCompanyInfoTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTelephoneFax">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCompanyInfoTelephoneFax">
+        <PropertyRef Name="telephoneFaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkBrand">
+    <End Role="lkBrand" Type="eDMSModel.Store.lkBrand" Multiplicity="1" />
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkBrand">
+        <PropertyRef Name="lkBrandID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkBrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkCategory">
+    <End Role="lkCategory" Type="eDMSModel.Store.lkCategory" Multiplicity="1" />
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkCategory">
+        <PropertyRef Name="lkCategoryID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_lkUnit">
+    <End Role="lkUnit" Type="eDMSModel.Store.lkUnit" Multiplicity="0..1" />
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkUnit">
+        <PropertyRef Name="lkUnitID" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="rlkUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblManufacturerAddress_lkManufacturer">
+    <End Role="lkManufacturer" Type="eDMSModel.Store.lkManufacturer" Multiplicity="1" />
+    <End Role="tblManufacturerAddress" Type="eDMSModel.Store.tblManufacturerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblManufacturerAddress">
+        <PropertyRef Name="rlkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblManufacturerAddress_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="1" />
+    <End Role="tblManufacturerAddress" Type="eDMSModel.Store.tblManufacturerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblManufacturerAddress">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblManufacturerTelephoneFax_lkManufacturer">
+    <End Role="lkManufacturer" Type="eDMSModel.Store.lkManufacturer" Multiplicity="1" />
+    <End Role="tblManufacturerTelephoneFax" Type="eDMSModel.Store.tblManufacturerTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblManufacturerTelephoneFax">
+        <PropertyRef Name="rlkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblManufacturerTelephoneFax_tblTelephoneFax">
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="1" />
+    <End Role="tblManufacturerTelephoneFax" Type="eDMSModel.Store.tblManufacturerTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTelephoneFax">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblManufacturerTelephoneFax">
+        <PropertyRef Name="telephoneFaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPurchaseOrderDetail_tblItem1">
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="1" />
+    <End Role="tblPurchaseOrderDetail" Type="eDMSModel.Store.tblPurchaseOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblPurchaseOrderDetail">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPurchaseOrderDetail_tblPurchaseOrder1">
+    <End Role="tblPurchaseOrder" Type="eDMSModel.Store.tblPurchaseOrder" Multiplicity="1" />
+    <End Role="tblPurchaseOrderDetail" Type="eDMSModel.Store.tblPurchaseOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPurchaseOrder">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblPurchaseOrderDetail">
+        <PropertyRef Name="purchaseOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceipt_lkSupplier">
+    <End Role="lkSupplier" Type="eDMSModel.Store.lkSupplier" Multiplicity="0..1" />
+    <End Role="tblReceipt" Type="eDMSModel.Store.tblReceipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkSupplier">
+        <PropertyRef Name="lkSupplierID" />
+      </Principal>
+      <Dependent Role="tblReceipt">
+        <PropertyRef Name="rlkSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceipt_tblBranch">
+    <End Role="tblBranch" Type="eDMSModel.Store.tblBranch" Multiplicity="0..1" />
+    <End Role="tblReceipt" Type="eDMSModel.Store.tblReceipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblReceipt">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceipt_tblWarehouse">
+    <End Role="lkWarehouse" Type="eDMSModel.Store.lkWarehouse" Multiplicity="0..1" />
+    <End Role="tblReceipt" Type="eDMSModel.Store.tblReceipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkWarehouse">
+        <PropertyRef Name="lkWarehouseID" />
+      </Principal>
+      <Dependent Role="tblReceipt">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_lkManufacturer1">
+    <End Role="lkManufacturer" Type="eDMSModel.Store.lkManufacturer" Multiplicity="0..1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.Store.tblReceivedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkManufacturer">
+        <PropertyRef Name="lkManufacturerID" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="rlkManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_tblItem">
+    <End Role="tblItem" Type="eDMSModel.Store.tblItem" Multiplicity="1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.Store.tblReceivedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblItem">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblReceivedItems_tblReceipt1">
+    <End Role="tblReceipt" Type="eDMSModel.Store.tblReceipt" Multiplicity="1" />
+    <End Role="tblReceivedItems" Type="eDMSModel.Store.tblReceivedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblReceipt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblReceivedItems">
+        <PropertyRef Name="receiptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierAddress_lkSupplier">
+    <End Role="lkSupplier" Type="eDMSModel.Store.lkSupplier" Multiplicity="1" />
+    <End Role="tblSupplierAddress" Type="eDMSModel.Store.tblSupplierAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkSupplier">
+        <PropertyRef Name="lkSupplierID" />
+      </Principal>
+      <Dependent Role="tblSupplierAddress">
+        <PropertyRef Name="rlkSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierAddress_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="1" />
+    <End Role="tblSupplierAddress" Type="eDMSModel.Store.tblSupplierAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSupplierAddress">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierTelephoneFax_tblTelephoneFax">
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="1" />
+    <End Role="tblSupplierTelephoneFax" Type="eDMSModel.Store.tblSupplierTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTelephoneFax">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblSupplierTelephoneFax">
+        <PropertyRef Name="telephoneFaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblWarehouseAddress_lkWarehouse">
+    <End Role="lkWarehouse" Type="eDMSModel.Store.lkWarehouse" Multiplicity="1" />
+    <End Role="tblWarehouseAddress" Type="eDMSModel.Store.tblWarehouseAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkWarehouse">
+        <PropertyRef Name="lkWarehouseID" />
+      </Principal>
+      <Dependent Role="tblWarehouseAddress">
+        <PropertyRef Name="rlkWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblWarehouseAddress_tblAddress">
+    <End Role="tblAddress" Type="eDMSModel.Store.tblAddress" Multiplicity="1" />
+    <End Role="tblWarehouseAddress" Type="eDMSModel.Store.tblWarehouseAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAddress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblWarehouseAddress">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblWarehouseTelephoneFax_lkWarehouse">
+    <End Role="lkWarehouse" Type="eDMSModel.Store.lkWarehouse" Multiplicity="1" />
+    <End Role="tblWarehouseTelephoneFax" Type="eDMSModel.Store.tblWarehouseTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lkWarehouse">
+        <PropertyRef Name="lkWarehouseID" />
+      </Principal>
+      <Dependent Role="tblWarehouseTelephoneFax">
+        <PropertyRef Name="rlkWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblWarehouseTelephoneFax_tblTelephoneFax">
+    <End Role="tblTelephoneFax" Type="eDMSModel.Store.tblTelephoneFax" Multiplicity="1" />
+    <End Role="tblWarehouseTelephoneFax" Type="eDMSModel.Store.tblWarehouseTelephoneFax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTelephoneFax">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblWarehouseTelephoneFax">
+        <PropertyRef Name="telephoneFaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
